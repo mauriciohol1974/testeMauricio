@@ -98,7 +98,7 @@ public class SimuladorNegocialManterCNPJIniciar extends ServicoEstrategia {
     }
     
     public String obterToken () throws IOException{
-    	URL urlToken = new URL("http://10.116.82.228:8089/token");
+    	URL urlToken = new URL("http://api.sisng.caixa/token");
 		HttpURLConnection connection = (HttpURLConnection) urlToken.openConnection();
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
@@ -138,9 +138,9 @@ public class SimuladorNegocialManterCNPJIniciar extends ServicoEstrategia {
     public String obterSimulacaoCNPJ(String tokenStr, String CNPJ, String user, String unidade) throws IOException{
     	
     	
-    			//URL url = new URL("http://10.116.82.228:8089/_apis/simulacaoPorCNPJ/"+CNPJ+"?api-version=1.0&matricula="+user+"&cgc="+unidade);
-    			URL url = new URL("http://10.116.82.228:8089/_apis/simulacaoPorCNPJ/9617942000198?api-version=1.0&matricula=p592428&cgc=5200");
-    			//URL url = new URL("http://10.116.82.228:8089/_apis/simulacaoPorNumero/2126387?api-version=1.0&matricula=c102103&cgc=5200");
+    			//URL url = new URL("http://api.sisng.caixa/_apis/simulacaoPorCNPJ/"+CNPJ+"?api-version=1.0&matricula="+user+"&cgc="+unidade);
+    			URL url = new URL("http://api.sisng.caixa/_apis/simulacaoPorCNPJ/9617942000198?api-version=1.0&matricula=p592428&cgc=5200");
+    			//URL url = new URL("http://api.sisng.caixa/_apis/simulacaoPorNumero/2126387?api-version=1.0&matricula=c102103&cgc=5200");
     			
     			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
     	        conn.setRequestMethod("GET");
@@ -170,8 +170,8 @@ public class SimuladorNegocialManterCNPJIniciar extends ServicoEstrategia {
     public String obterSimulacaoNuSimulacao(String tokenStr, String nuSimulacao, String user, String unidade) throws IOException{
     	
     	
-		//URL url = new URL("http://10.116.82.228:8089/_apis/simulacaoPorNumero/"+nuSimulacao+"?api-version=1.0&matricula="+user+"&cgc="+unidade);
-    	URL url = new URL("http://10.116.82.228:8089/_apis/simulacaoPorNumero/2126387?api-version=1.0&matricula=c102103&cgc=5200");
+		//URL url = new URL("http://api.sisng.caixa/_apis/simulacaoPorNumero/"+nuSimulacao+"?api-version=1.0&matricula="+user+"&cgc="+unidade);
+    	URL url = new URL("http://api.sisng.caixa/_apis/simulacaoPorNumero/2126387?api-version=1.0&matricula=c102103&cgc=5200");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8/json");

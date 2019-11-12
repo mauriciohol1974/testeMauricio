@@ -102,7 +102,7 @@ public class SimuladorNegocialApropriarFinalizar extends ServicoEstrategia {
     }
     
     public String obterToken () throws IOException{
-    	URL urlToken = new URL("http://10.116.82.228:8089/token");
+    	URL urlToken = new URL("http://api.sisng.caixa/token");
 		HttpURLConnection connection = (HttpURLConnection) urlToken.openConnection();
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
@@ -150,7 +150,7 @@ public class SimuladorNegocialApropriarFinalizar extends ServicoEstrategia {
         
 		//CONFIRMACAO DE APROPRIACAO
         LogUtilSigcb.debug("CONFIRMAR APROPRIACAO NO SISNG" + jsonPOST.toString());
-        URL urlPOST = new URL("http://10.116.82.228:8089/_apis/confirmarApropriacao?api-version=1.0");
+        URL urlPOST = new URL("http://api.sisng.caixa/_apis/confirmarApropriacao?api-version=1.0");
         HttpURLConnection connPOST = (HttpURLConnection) urlPOST.openConnection();
         connPOST.setRequestMethod("POST");
         connPOST.setRequestProperty("Content-Type","application/json"); 
