@@ -1,0 +1,12 @@
+A:link {
+	FONT-SIZE: 8pt; FONT-FAMILY: verdana; FONT-WEIGHT: normal; COLOR: #ffffff; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 8pt; FONT-FAMILY: verdana; FONT-WEIGHT: normal; COLOR: #ffffff; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 8pt; FONT-FAMILY: verdana; COLOR: #ffffff
+}
+A:hover {
+	FONT-SIZE: 8pt; FONT-FAMILY: verdana; COLOR: #ffcc00
+}

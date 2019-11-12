@@ -1,0 +1,559 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: home.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 30/11/2004
+************************************************/
+-->
+
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+	
+	<H1><A NAME="top">Gestão de Cobrança Bancária</A><HR/></H1>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<!-- Texto -->
+	<table>
+		<tr>
+			<td class="valor">
+
+				<dl>
+					<dt>     <A HREF="../../saibamais/init/manual.html">Informações úteis sobre o uso deste Manual.</A><dt/>
+			
+					<dt>&nbsp;<dt/>
+			
+					<dt>1.   Introdução ao SIGCB</dt>
+					<dd>1.1. <A HREF="../../saibamais/introducao/objetivos.html">Objetivos do Sistema</A></dd>
+					<dd>1.2. <A HREF="../../saibamais/introducao/gestor.html">Usuário Gestor</A></dd>
+					<dd>1.3. <A HREF="../../saibamais/introducao/interfaces.html">Interfaces do Sistema</A></dd>
+					<dd>1.4. <A HREF="../../saibamais/introducao/publicosistema.html">Publico Alvo do Sistema</A></dd>
+					<dd>1.5. <A HREF="../../saibamais/introducao/publicomanual.html">Publico Alvo do Manual</A></dd>
+			
+					<dt>&nbsp;<dt/>
+			
+					<dt>2.   Padrões do Sistema</dt>
+					<dd>2.1. <A HREF="../../saibamais/padrao/navegacao.html">Padrões de Navegação</A></dd>
+					<dd>2.2. <A HREF="../../saibamais/padrao/mensagens.html">Mensagens do Sistema</A></dd>
+					<dd>2.3. <A HREF="../../saibamais/padrao/erros.html">Tratamento de Erros</A></dd>
+					<dd>2.4. <A HREF="../../saibamais/padrao/login.html">Login: Identificação do Usuário</A></dd>
+					<dd>2.5. <A HREF="../../saibamais/padrao/menu.html">Menu Principal do Sistema</A></dd>
+					<dd>2.6. <A HREF="../../saibamais/padrao/saibamais.html">SaibaMais: Manual do Usuário on-line</A></dd>
+					<dd>2.7. <A HREF="../../saibamais/padrao/sair.html">Sair: Processo de saída do Sistema</A></dd>
+							
+					<dt>&nbsp;<dt/>
+			
+					<dt><a name="funcionalidades">3.   Funcionalidades do Sistema</a></dt>
+					
+					<dd>3.1. Menu Cedentes</dd>
+					<dl>	
+						<dd>3.1.1 Cadastro</dd>
+						<ul>	
+							<li>Incluir Cedente</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_filtro.html">Incluir Cedente - Filtro</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_principal.html">Incluir Cedente - Principal</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiageral.html">Incluir Cedente - Guia Geral</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiafloat.html">Incluir Cedente - Guia Float</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiacontas.html">Incluir Cedente - Guia Contas Déb. Créd. Rateio</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiaeletron.html">Incluir Cedente - Guia Cedente Eletrônico</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiabloq.html">Incluir Cedente - Guia Boletos</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiamsgbloq.html">Incluir Cedente - Guia Mensagens para Boletos</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiatarifa.html">Incluir Cedente - Guia Tarifa</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_guiaconc.html">Incluir Cedente - Guia Conclusão</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_incluir_pendencias.html">Incluir - Itens Excepcionados</A></li>
+							</ul>
+							<li>Manter Cedente</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/cedente/cedente_manter_filtro.html">Manter Cedente - Filtro</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_manter_listar_uniden.html">Manter Cedente - Listar EN</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_manter_listar_unidpv.html">Manter Cedente - Listar PV</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_manter_listar_cpfcnpj.html">Manter Cedente - Listar CPF/CNPJ</A></li>
+								<li> <A HREF="../../saibamais/cedente/cedente_acao.html">Manter Cedente - Ações</A></li>
+								<li>Manter Cedente - Alterar</li>
+								<ul>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_principal.html">Alterar - Principal</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiageral.html">Alterar - Guia Geral</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiafloat.html">Alterar - Guia Float</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiacontas.html">Alterar - Guia Contas Déb. Créd. Rateio</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiaeletron.html">Alterar - Guia Cedente Eletrônico</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiabloq.html">Alterar - Guia Boletos</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiamsgbloq.html">Alterar - Guia Mensagens para Boletos</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiatarifa.html">Alterar - Guia Tarifa</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_guiaconc.html">Alterar - Guia Conclusão</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_excepanterior.html">Alterar - Excepcionação Vigente</A></li>
+									<li> <A HREF="../../saibamais/cedente/cedente_alterar_pendencias.html">Alterar - Itens Excepcionados</A></li>
+								</ul>
+							  <li> <A HREF="../../saibamais/cedente/cedente_consultar_principal.html">Manter Cedente - Consultar</A></li>					
+							</ul>
+						</ul>
+						<ul>	
+							<li> <A HREF="../../saibamais/cedente/cedente_sucesso.html">Cedente - Sucesso</A></li>
+							<li> <A HREF="../../saibamais/cedente/cedente_erro.html">Cedente - Erro</A></li>
+						</ul>
+						
+						<dd>3.1.2 Excepcionação</dd>
+						<ul>
+							<li> <A HREF="../../saibamais/cedente/excepci_manter_filtro.html">Excepcionação - Filtro</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_manter_listar_uniden.html">Excepcionação - Listar EN</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_manter_listar_unidpv.html">Excepcionação - Listar PV</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_manter_listar_cpfcnpj.html">Excepcionação - Listar CPF/CNPJ</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_manter_listar_cedente.html">Excepcionação - Listar Cedente</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_acao_responder.html">Excepcionação - Ação Responder</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_acao_alterar_data.html">Excepcionação - Alterar Data Vigência</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_consultar.html">Excepcionação - Consultar</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_sucesso.html">Excepcionação - Sucesso</A></li>
+							<li> <A HREF="../../saibamais/cedente/excepci_erro.html">Excepcionação - Erro</A></li>
+						</ul>
+						
+						<dd>3.1.3 Cliente Internet</dd>
+						<ul>
+							<li>Usuário/Relacionamento</li>
+							<ul>
+								<li>Incluir Usuário</li>
+								<ul>
+									<li> <A HREF="../../saibamais/cedente/cliinte_incluir_filtro.html">Incluir Usuário/Relacion. - Filtro</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_incluir.html">Incluir Usuário/Relacion. - Principal</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_incluir_listar_cpfcnpj.html">Incluir Usuário/Relacion. - Listar CPF/CNPJ</A></li>
+								</ul>	
+									<li>Manter Usuário</li>
+								<ul>
+									<li> <A HREF="../../saibamais/cedente/cliinte_manter_filtro.html">Manter Usuário/Relacion. - Filtro</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_manter_listar_cpfcnpj.html">Manter Usuário/Relacion. - Listar CPF/CNPJ</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_manter_listar_cpfusu.html">Manter Usuário/Relacion. - Listar CPF Usuário</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_manter_listar_ced.html">Manter Usuário/Relacion. - Listar Cedente</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_alterar.html">Manter Usuário/Relacion. - Alterar Usuário</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_altinc.html">Manter Usuário/Relacion. - Alterar Incluir</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_alterar_senha.html">Manter Usuário/Relacion. - Alterar Senha</A></li>
+									<li> <A HREF="../../saibamais/cedente/cliinte_alterar_relacionamento.html">Manter Usuário/Relacion. - Alterar Relacion.</A></li>
+								</ul>
+								<li> <A HREF="../../saibamais/cedente/cliinte_sucesso_rs.html">Usuário/Relacion. - Sucesso - Incluir</A></li>
+								<li> <A HREF="../../saibamais/cedente/cliinte_sucesso.html">Usuário/Relacion. - Sucesso - Manter</A></li>
+								<li> <A HREF="../../saibamais/cedente/cliinte_erro_rs.html">Usuário/Relacion. - Erro - Incluir</A></li>
+								<li> <A HREF="../../saibamais/cedente/cliinte_erro.html">Usuário/Relacion. - Erro - Manter</A></li>
+							</ul>
+							<li>Perfil Internet</li>
+							<ul>
+								<li>Incluir Perfil</li>
+								<ul>
+									<li> <A HREF="../../saibamais/cedente/perinte_incluir_filtro.html">Incluir Perfil Internet - Filtro</A></li>
+									<li> <A HREF="../../saibamais/cedente/perinte_incluir.html">Incluir Perfil Internet - Principal</A></li>
+								</ul>	
+									<li>Manter Perfil</li>
+								<ul>
+									<li> <A HREF="../../saibamais/cedente/perinte_manter_listar.html">Manter Perfil Internet - Filtro</A></li>
+									<li> <A HREF="../../saibamais/cedente/perinte_alterar.html">Manter Perfil Internet - Alterar</A></li>
+								</ul>
+								<li> <A HREF="../../saibamais/cedente/perinte_sucesso.html">Perfil Internet - Sucesso</A></li>
+								<li> <A HREF="../../saibamais/cedente/perinte_erro.html">Perfil Internet - Erro</A></li>
+							</ul>
+						</ul>
+					</dl>
+		
+					<dd>3.2. Menu Serviços</dd>
+						<dl>
+						<dd>3.2.1. Arquivo Remessa/Retorno</dd>
+							<ul>
+								<li> <A HREF="../../saibamais/servico/arqreme_manter_filtro.html">Arquivo Remessa/Retorno - Filtro</A></li>
+								<li> <A HREF="../../saibamais/servico/arqreme_manter_listar.html">Arquivo Remessa/Retorno - Listar</A></li>
+								<li> <A HREF="../../saibamais/servico/arqreme_manter_listar_cedente.html">Arquivo Remessa/Retorno - Listar Cedente</A></li>
+								<li> <A HREF="../../saibamais/servico/arqreme_consultar.html">Arquivo Remessa/Retorno - Consultar</A></li>
+								<li> <A HREF="../../saibamais/servico/arqreme_sucesso.html">Arquivo Remessa/Retorno - Sucesso</A></li>
+								<li> <A HREF="../../saibamais/servico/arqreme_erro.html">Arquivo Remessa/Retorno - Erro</A></li>
+							</ul>
+						<dd>3.2.2. Banco de Sacados</dd>
+							<ul>
+								<li>Incluir Banco de Sacados</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bcosaca_incluir_filtro.html">Incluir Banco de Sacados - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_incluir.html">Incluir Banco de Sacados - Principal</A></li>
+									</ul>
+								<li>Manter Banco de Sacados</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bcosaca_manter_filtro.html">Manter Banco de Sacados - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_manter_listar.html">Manter Banco de Sacados - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_alterar.html">Manter Banco de Sacados - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_consultar.html">Manter Banco de Sacados - Consultar</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_sucesso.html">Banco de Sacados - Sucesso</A></li>
+										<li> <A HREF="../../saibamais/servico/bcosaca_erro.html">Banco de Sacados - Erro</A></li>
+									</ul>
+								<li>Incluir Sacado</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/sacado_incluir_filtro.html">Incluir Sacado - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_incluir.html">Incluir Sacado - Principal</A></li>
+									</ul>
+								<li>Manter Sacado</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/sacado_manter_filtro.html">Manter Sacado - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_manter_listar_bcosac.html">Manter Sacado - Listar Banco Sacados</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_manter_listar_sacado.html">Manter Sacado - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_alterar.html">Manter Sacado - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_consultar.html">Manter Sacado - Consultar</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_sucesso.html">Sacado - Sucesso</A></li>
+										<li> <A HREF="../../saibamais/servico/sacado_erro.html">Sacado - Erro</A></li>
+									</ul>
+								<li>Incluir Solicitação/Agendamento de Título</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/soagtit_incluir_filtro.html">Incluir Solic./Agend. de Título - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_incluir.html">Incluir Solic./Agend. de Título - Principal</A></li>
+									</ul>
+								<li>Manter Solicitação/Agendamento de Título</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/soagtit_manter_filtro.html">Manter Solic./Agend. de Título - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_manter_listar_bcosac.html">Manter Solic./Agend. de Título - Listar Banco Sacados</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_manter_listar.html">Manter Solic./Agend. de Título - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_alterar.html">Manter Solic./Agend. de Título - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_consultar.html">Manter Solic./Agend. de Título - Consultar</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_sucesso.html">Solic./Agend. de Título - Sucesso</A></li>
+										<li> <A HREF="../../saibamais/servico/soagtit_erro.html">Solic./Agend. de Título - Erro</A></li>
+									</ul>
+								</ul>
+							<dd>3.2.3. Banco de Títulos</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/servico/bcotitu_manter_filtro.html">Banco de Títulos - Filtro</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_manter_listar_titulo.html">Banco de Títulos - Listar</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_manter_listar_consol.html">Banco de Títulos - Listar Consolidado</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_acao.html">Banco de Títulos - Ações</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_acao_impBoleto.html">Banco de Títulos - Imprimir Boleto</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_acao_impordemprot.html">Banco de Títulos - Imprimir Ordem de Protesto</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_alterar.html">Banco de Títulos - Alterar</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_consultar.html">Banco de Títulos - Consultar</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_sucesso.html">Banco de Títulos - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/bcotitu_erro.html">Banco de Títulos - Erro</A></li>
+								</ul>
+							<dd>3.2.4. Boletos On-Line</dd>
+								<ul>
+									<li>Incluir Solicitação</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bloquet_incluir_filtro.html">Incluir Solic. Boletos On-Line - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bloquet_incluir.html">Incluir Solic. Boletos On-Line - Principal</A></li>
+									</ul>
+								<li>Manter Solicitação</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bloquet_manter_filtro.html">Manter Solic. Boletos On-Line - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bloquet_manter_listar.html">Manter Solic. Boletos On-Line - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/bloquet_alterar.html">Manter Solic. Boletos On-Line - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/bloquet_consultar.html">Manter Solic. Boletos On-Line - Consultar</A></li>
+									</ul>
+									<li> <A HREF="../../saibamais/servico/bloquet_sucesso.html">Solic. Boletos On-Line - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/bloquet_erro.html">Solic. Boletos On-Line - Erro</A></li>
+								</ul>		
+							<dd>3.2.5. Borderô On-Line</dd>
+								<ul>
+									<li>Incluir Borderô</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bordero_incluir_filtro.html">Incluir Borderô - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bordero_incluir.html">Incluir Borderô - Principal</A></li>
+										<li> <A HREF="../../saibamais/servico/titulo_incluir.html">Incluir Borderô - Incluir Título</A></li>
+									</ul>
+									<li>Manter Borderô</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/bordero_manter_filtro.html">Manter Borderô - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/bordero_manter_listar.html">Manter Borderô - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/bordero_alterar.html">Manter Borderô - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/bordero_consultar.html">Manter Borderô - Consultar</A></li>
+										<li> <A HREF="../../saibamais/servico/bordero_acao_impbordero.html">Manter Borderô - Imprimir Borderô</A></li>
+										<li> <A HREF="../../saibamais/servico/titulo_manter_listar.html">Manter Borderô - Manter Título - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/titulo_alterar.html">Manter Borderô - Manter Título - Alterar</A></li>
+										<li> <A HREF="../../saibamais/servico/titulo_consultar.html">Manter Borderô - Manter Título - Consultar</A></li>
+									</ul>
+									<li> <A HREF="../../saibamais/servico/bordero_sucesso.html">Borderô - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/bordero_erro.html">Borderô - Erro</A></li>
+									<li> <A HREF="../../saibamais/servico/titulo_sucesso.html">Título - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/titulo_erro.html">Título - Erro</A></li>
+								</ul>
+								<dd>3.2.6. Liquidações Rejeitadas</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/servico/liqreje_manter_filtro.html">Liquidações Rejeitadas - Filtro</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_manter_listar.html">Liquidações Rejeitadas - Listar</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_acao_recomando.html">Liquidações Rejeitadas - Recomando</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_acao_rec_altvalor.html">Liquidações Rejeitadas - Recomando Especial</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_consultar.html">Liquidações Rejeitadas - Consultar</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_sucesso.html">Liquidações Rejeitadas - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/liqreje_erro.html">Liquidações Rejeitadas - Erro</A></li>
+								</ul>
+								<dd>3.2.7. Protesto</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/servico/protest_acao_filtro.html">Protesto - Filtro</A></li>
+									<li> <A HREF="../../saibamais/servico/protest_acao.html">Protesto - Ação</A></li>
+									<li> <A HREF="../../saibamais/servico/protest_sucesso.html">Protesto - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/protest_erro.html">Protesto - Erro</A></li>
+								</ul>
+								<dd>3.2.8. Segunda Via de Extrato</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/servico/solextr_manter_filtro.html">Solicitar 2a. via de Extrato - Filtro</A></li>
+									<li> <A HREF="../../saibamais/servico/solextr_incluir.html">Solicitar 2a. via de Extrato - Incluir</A></li>
+									<li> <A HREF="../../saibamais/servico/solextr_consultar.html">Solicitar 2a. via de Extrato - Consultar</A></li>
+									<li> <A HREF="../../saibamais/servico/solextr_alterar.html">Solicitar 2a. via de Extrato - Alterar</A></li>
+									<li> <A HREF="../../saibamais/servico/solextr_sucesso.html">Solicitar 2a. via de Extrato - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/solextr_erro.html">Solicitar 2a. via de Extrato - Erro</A></li>
+								</ul>
+								<dd>3.2.9. Tarifa Manual</dd>
+								<ul>
+									<li>Incluir Tarifa</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/tarifa_incluir_filtro.html">Lançamento de Tarifa Manual (Incluir) - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/tarifa_incluir.html">Lançamento de Tarifa Manual (Incluir) - Principal</A></li>
+									</ul>
+								<li>Manter Tarifa</li>
+									<ul>
+										<li> <A HREF="../../saibamais/servico/tarifa_manter_filtro.html">Lançamento de Tarifa Manual (Manter) - Filtro</A></li>
+										<li> <A HREF="../../saibamais/servico/tarifa_manter_listar.html">Lançamento de Tarifa Manual (Manter) - Listar</A></li>
+										<li> <A HREF="../../saibamais/servico/tarifa_consultar.html">Lançamento de Tarifa Manual (Manter) - Consultar</A></li>
+									</ul>
+									<li> <A HREF="../../saibamais/servico/tarifa_sucesso.html">Lançamento de Tarifa Manual - Sucesso</A></li>
+									<li> <A HREF="../../saibamais/servico/tarifa_erro.html">Lançamento de Tarifa Manual - Erro</A></li>
+								</ul>
+							</dl>
+									
+					<dd>3.3. Menu Consultas</dd>
+						<dl>
+							<dd>3.3.1. Consultas Gerais</dd>
+								<ul>
+									<li>Cedente Centralizador</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/cedcent_manter_filtro.html">Cedente Centralizador - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/cedcent_consultar.html">Cedente Centralizador - Consultar</A></li>
+									</ul>
+									<li>Cedentes com Banco de Sacados</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/cedbcos_manter_filtro.html">Cedentes com Banco de Sacados - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/cedbcos_manter_listar.html">Cedentes com Banco de Sacados - Listar</A></li>
+										<li> <A HREF="../../saibamais/consulta/cedbcos_consultar.html">Cedentes com Banco de Sacados - Consultar</A></li>
+									</ul>
+									<li>GiroCaixa Instantâneo</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/girocai_manter_filtro.html">GiroCaixa Instantâneo - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/girocai_manter_listar_cpfcnpj.html">GiroCaixa Instantâneo - Listar CNPJ</A></li>
+										<li> <A HREF="../../saibamais/consulta/girocai_manter_listar_uniden.html">GiroCaixa Instantâneo - Listar EN</A></li>
+										<li> <A HREF="../../saibamais/consulta/girocai_manter_listar_unidpv.html">GiroCaixa Instantâneo - Listar PV</A></li>
+										<li> <A HREF="../../saibamais/consulta/girocai_consultar.html">GiroCaixa Instantâneo - Consultar</A></li>
+									</ul>
+									<li>Histórico de Cedentes</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/hisced_manter_filtro.html">Histórico de Cedentes - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/hisced_manter_listar.html">Histórico de Cedentes - Listar</A></li>
+										<li> <A HREF="../../saibamais/consulta/hisced_consultar.html">Histórico de Cedentes - Consultar</A></li>
+									</ul>
+									<li>Lançamento de Tarifa</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/lantari_manter_filtro.html">Lançamento de Tarifas - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/lantari_manter_listar.html">Lançamento de Tarifas - Listar</A></li>
+										<li> <A HREF="../../saibamais/consulta/lantari_consultar.html">Lançamento de Tarifas - Consultar</A></li>
+									</ul>
+									<li>Movimento de Cobrança</li>
+									<ul>
+										<li>Cedentes por Rentabilidade</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/mcrenta_manter_filtro.html">Cedentes por Rentabilidade - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/mcrenta_consultar.html">Cedentes por Rentabilidade - Consultar</A></li>
+										</ul>
+										<li>Movimento do Cedente (Extrato)</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/mcextra_manter_filtro.html">Movimento do Cedente (Extrato) - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/mcextra_consultar.html">Movimento do Cedente (Extrato) - Consultar</A></li>
+										</ul>
+										<li>Movimento do Cedente (Totais)</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/mctotai_manter_filtro.html">Movimento do Cedente (Totais) - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/mctotai_consultar.html">Movimento do Cedente (Totais) - Consultar</A></li>
+										</ul>
+										<li>Rentabilidade do Cedente</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/mcrence_manter_filtro.html">Rentabilidade do Cedente - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/mcrence_consultar.html">Rentabilidade do Cedente - Consultar</A></li>
+										</ul>
+									</ul>
+									<li>Protesto de Títulos</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/protest_manter_filtro.html">Protesto de Títulos - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/protest_consultar.html">Protesto de Títulos - Consultar</A></li>
+									</ul>
+									<li>Saldo de Cobrança</li>
+									<ul>
+										<li> <A HREF="../../saibamais/consulta/salcob_manter_filtro.html">Saldo de Cobrança - Filtro</A></li>
+										<li> <A HREF="../../saibamais/consulta/salcob_consultar.html">Saldo de Cobrança - Consultar</A></li>
+									</ul>
+									<li>Serviços Solicitados</li>
+									<ul>
+										<li>Solicitações no Dia</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/servdia_manter_filtro.html">Solicitações no Dia - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_manter_listar_ageemi.html">Agend. Emis. Tít. p/ Bco de Sacados - Listar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_ageemi.html">Agend. Emis. Tít. p/ Bco de Sacados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_blopreimp.html">Boleto Pré-Impresso - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_manter_listar_emitit.html">Emissão de Tít. p/ Bco de Sacados - Listar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_emitit.html">Emissão de Tít. p/ Bco de Sacados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_extmovtit.html">Extrato de Movimentação de Títulos - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_extdiscrdb.html">Extrato Distribuição de Créd. e Déb. - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_lantarman.html">Lançamento de Tarifa Manual - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_reititbai.html">Reincl. Tít. Baixados ou Liquidados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_redarqret.html">Redisponib. de Arquivo Retorno - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servdia_consultar_reeblo.html">Reemissão de Boletos - Consultar</A></li>
+										</ul>
+										<li>Solicitações Processadas</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/servpro_manter_filtro.html">Solicitações Processadas - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_manter_listar_pvvinc.html">Solicitações Processadas - Listar PV</A></li>											
+											<li> <A HREF="../../saibamais/consulta/servpro_manter_listar_ageemi.html">Agend. Emis. Tít. p/ Bco de Sacados - Listar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_ageemi.html">Agend. Emis. Tít. p/ Bco de Sacados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_blopreimp.html">Boleto Pré-Impresso - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_manter_listar_emitit.html">Emissão de Tít. p/ Bco de Sacados - Listar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_emitit.html">Emissão de Tít. p/ Bco de Sacados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_extmovtit.html">Extrato de Movimentação de Títulos - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_extdiscrdb.html">Extrato Distribuição de Créd. e Déb. - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_lantarman.html">Lançamento de Tarifa Manual - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_reititbai.html">Recuper. Tít. Baixados ou Liquidados - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_redarqret.html">Redisponib. de Arquivo Retorno - Consultar</A></li>
+											<li> <A HREF="../../saibamais/consulta/servpro_consultar_reeblo.html">Reemissão de Boletos - Consultar</A></li>
+										</ul>
+										<li>Solicitações Rejeitadas</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/servrej_manter_filtro.html">Solicitações Rejeitadas - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/servrej_manter_listar_pvvinc.html">Solicitações Rejeitadas - Listar PV</A></li>
+											<li> <A HREF="../../saibamais/consulta/servrej_consultar.html">Solicitações Rejeitadas - Consultar</A></li>
+										</ul>
+									</ul>
+									<li>Tarifa por Float e EN</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/tarflen_manter_filtro.html">Tarifa por Float e EN - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/tarflen_consultar.html">Tarifa por Float e EN - Consultar</A></li>
+										</ul>
+									<li>Títulos Alterados</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/titalte_manter_filtro.html">Títulos Alterados - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/titalte_consultar.html">Títulos Alterados - Consultar</A></li>
+										</ul>
+									<li>Títulos Liquidados</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/titliq_manter_filtro.html">Títulos Liquidados - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/titliq_manter_listar_cedente.html">Títulos Liquidados - Listar Cedente</A></li>
+											<li> <A HREF="../../saibamais/consulta/titliq_manter_listar_unidpv.html">Títulos Liquidados - Listar Unidade</A></li>
+											<li> <A HREF="../../saibamais/consulta/titliq_consultar.html">Títulos Liquidados - Consultar</A></li>
+										</ul>
+									<li>Títulos Liquidados no Dia</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/titliqd_manter_filtro.html">Títulos Liquidados no Dia - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/titliqd_manter_listar_unidpv.html">Títulos Liquidados no Dia - Listar Cedente</A></li>
+											<li> <A HREF="../../saibamais/consulta/titliqd_manter_listar_cedente.html">Títulos Liquidados no Dia - Consultar</A></li>
+										</ul>
+									<li>Valores a Serem Lançados</li>
+										<ul>
+											<li> <A HREF="../../saibamais/consulta/vallanc_manter_filtro.html">Valores a Serem Lançados - Filtro</A></li>
+											<li> <A HREF="../../saibamais/consulta/vallanc_manter_listar.html">Valores a Serem Lançados - Listar</A></li>
+											<li> <A HREF="../../saibamais/consulta/vallanc_consultar.html">Valores a Serem Lançados - Consultar</A></li>
+										</ul>
+								</ul>
+							<dd>3.3.2. Consultas Gerenciais</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/consulta/gerenc_manter_filtro.html">Consultas Gerenciais - Filtro</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_manter_listar.html">Consultas Gerenciais - Listar </A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_blolascai.html">Guia Bloq. por Serv. - Bloq. Laser padrão Caixa</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_blopreimp.html">Guia Bloq. por Serv. - Bloq. Pré-Impressos</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_blocarlascai.html">Guia Bloq. por Serv. - Carnês Laser padrão Caixa</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_blopers.html">Guia Bloq. por Serv. - Boletos Personalizados</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_cedpadcna.html">Guia Ced. Eletr. - Ced. padrões CNAB 240 e 400</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_cedmeient.html">Guia Ced. Eletr. - Cedentes por Meio Entrada</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_cedsitmov.html">Guia Ced. Eletr. - Ced. por Sit. Teste/Prod. e Mov.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_cedmovtipvan.html">Guia Ced. Eletr. - Movimento por tipo de Van</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_prcposunirec.html">Guia Preço Transf. e Tarifas Liq. - Pos. PV/EN Receb.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_prcposunivin.html">Guia Preço Transf. e Tarifas Liq. - Pos. PV/EN Vincul.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qtmovtit.html">Guia Tít. por Quant. e Valor - Movimentação de Títulos</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qtmovtittar.html">Guia Tít. por Quant. e Valor - Mov. Título/Tarifa/Float</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qtpostitcar.html">Guia Tít. por Quant. e Valor - Pos. Tít. Carteira Serv.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qttitinc.html">Guia Tít. por Quant. e Valor - Títulos Incluídos</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qttitinc_det.html">Guia Tít. por Quant. e Valor - Títulos Incl. - Detalhes</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qttitincliq.html">Guia Tít. por Quant. e Valor - Tít. Incl./Liq. Tipo Cobr.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qttitflozer.html">Guia Tít. por Quant. e Valor - Tít. Liq. com Float = 0</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_qttitliqser.html">Guia Tít. por Quant. e Valor - Tít. Liq. Serv./Meio Liq.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_taremipos.html">Guia Valores de Tarifas - Emis. e Post. de Bloq./Extr.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_tarliqser.html">Guia Valores de Tarifas - Liq. por Serv./Meio Liq.</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_tarprotit.html">Guia Valores de Tarifas - Protesto de Títulos</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_tarserdiv.html">Guia Valores de Tarifas - Serviços Diversos</A></li>
+									<li> <A HREF="../../saibamais/consulta/gerenc_consultar_tartottar.html">Guia Valores de Tarifas - Total de Tarifas</A></li>									
+								</ul>	
+							<dd>3.3.3. Consultas Contábeis</dd>
+								<ul>
+									<li> <A HREF="../../saibamais/consulta/contab_manter_filtro.html">Consultas Contábeis - Filtro</A></li>
+									<li> <A HREF="../../saibamais/consulta/contab_consultar_opera.html">Saldo Operacional</A></li>
+									<li> <A HREF="../../saibamais/consulta/contab_consultar_saldo.html">Saldos Contábeis</A></li>
+									<li> <A HREF="../../saibamais/consulta/contab_consultar_posic.html">Posições Contábeis</A></li>
+									<li> <A HREF="../../saibamais/consulta/contab_erro.html">Consultas Contábeis - Erro</A></li>
+								</ul>								
+						</dl>
+					<dd>3.4. Menu Parâmetros</dd>
+					<dl>	
+						<dd>3.4.1 Agrupamento de Serviços</dd>
+						<ul>	
+							<li>Agrupamento de Serviços - Incluir</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/parametro/agrup_incluir_filtro.html">Incluir Agrupamento de Serviços - Filtro</A></li>
+								<li> <A HREF="../../saibamais/parametro/agrup_incluir.html">Incluir Agrupamento de Serviços - Principal</A></li>
+							</ul>
+							<li>Agrupamento de Serviços - Manter</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/parametro/agrup_manter_filtro.html">Manter Agrupamento de Serviços - Filtro</A></li>
+								<li> <A HREF="../../saibamais/parametro/agrup_manter_listar.html">Manter Agrupamento de Serviços - Listar</A></li>
+								<li> <A HREF="../../saibamais/parametro/agrup_alterar.html">Manter Agrupamento de Serviços - Alterar</A></li>
+							</ul>
+						</ul>
+						<ul>	
+							<li> <A HREF="../../saibamais/parametro/agrup_sucesso.html">Agrupamento de Serviços - Sucesso</A></li>
+							<li> <A HREF="../../saibamais/parametro/agrup_erro.html">Agrupamento de Serviços - Erro</A></li>
+						</ul>
+						
+						<dd>3.4.2 PV Cobrador</dd>
+						<ul>
+							<li>PV Cobrador - Incluir</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/parametro/pvcob_incluir_filtro.html">Incluir PV Cobrador - Filtro</A></li>
+								<li> <A HREF="../../saibamais/parametro/pvcob_incluir.html">Incluir PV Cobrador - Principal</A></li>
+							</ul>
+							<li>PV Cobrador - Manter</li>
+							<ul>	
+								<li> <A HREF="../../saibamais/parametro/pvcob_manter_filtro.html">Manter PV Cobrador - Filtro</A></li>
+								<li> <A HREF="../../saibamais/parametro/pvcob_manter_listar.html">Manter PV Cobrador - Listar PV</A></li>					
+								<li> <A HREF="../../saibamais/parametro/pvcob_manter_listar_cep.html">Manter PV Cobrador - Listar CEP</A></li>
+								<li> <A HREF="../../saibamais/parametro/pvcob_alterar.html">Manter PV Cobrador - Alterar</A></li>
+							</ul>
+						</ul>
+						<ul>	
+							<li> <A HREF="../../saibamais/parametro/pvcob_sucesso.html">PV Cobrador - Sucesso</A></li>
+							<li> <A HREF="../../saibamais/parametro/pvcob_erro.html">PV Cobrador - Erro</A></li>
+						</ul>
+					</dl>
+				</dl>	
+			</td>
+		</tr>
+	</table>
+
+</BODY>
+</HTML>

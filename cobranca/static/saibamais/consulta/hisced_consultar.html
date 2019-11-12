@@ -1,0 +1,205 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: husced_consultar.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 26/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Histórico de Cedentes - Consultar</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo consultar histórico do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para tela anterior.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Pessoa Jurídica ou da Pessoa Física do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de pessoa:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de pessoa do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código Cliente (COCLI):
+			</td>
+			<td width="75%" class="valor">
+				Código do cliente no SICLI.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Filtro Guia:
+			</td>
+			<td width="75%" class="valor">
+				Guia selecionada para filtragem.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Filtro Data de:
+			</td>
+			<td width="75%" class="valor">
+				Data inicial da filtragem.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Filtro Data até:
+			</td>
+			<td width="75%" class="valor">
+				Data final da filtragem.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Informação Alterada:
+			</td>
+			<td width="75%" class="valor">
+				Informação alterada no cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Movimento:
+			</td>
+			<td width="75%" class="valor">
+				Data da alteração no cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Hora:
+			</td>
+			<td width="75%" class="valor">
+				Hora da alteração no cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Usuário:
+			</td>
+			<td width="75%" class="valor">
+				Código do Usuário de alçada responsável pela alteração.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Anterior:
+			</td>
+			<td width="75%" class="valor">
+				Valor antes cadastrado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Atual:
+			</td>
+			<td width="75%" class="valor">
+				Valor alterado pelo Usuário.
+			</td>
+		</tr>
+					
+	</table>		
+
+</BODY>
+
+</HTML>

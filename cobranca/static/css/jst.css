@@ -1,0 +1,81 @@
+body.title {
+	background-color:#ffffff;
+	background-image:url(../imagens/saibamais/joust/title_back.gif);
+	background-repeat:repeat-x;
+}
+body.dummy {
+	background-attachment:fixed;
+	background-image:url(../imagens/saibamais/joust/title_dummyback.gif);
+	background-repeat:repeat-y;
+}
+body.menu {
+	background-attachment:fixed;
+	background-image:url(../imagens/saibamais/joust/mnu_back.gif);
+	background-repeat:repeat-y;
+	margin-left:1px;
+	margin-right:0px;
+	margin-top:2px;
+}
+body.menucntrl {
+	background-color:#E7EFF3;
+	background-image:url(../imagens/saibamais/joust/mnu_ctrlback.gif);
+	background-repeat:repeat-x;
+}
+
+img {
+	border:none;
+}
+
+.menuItem {
+	position:absolute; 
+	visibility:hidden; 
+	left:0px;
+}
+
+.menuItem BR {
+	clear:both;
+}
+
+.node {
+	color:#202020;
+	font-family:"Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.node A:link {
+	color:#202020;
+	text-decoration: none;
+}
+.node A:visited {
+	color:#202020; 
+	text-decoration:none;
+}
+.node A:active {
+	color:#202020; 
+	text-decoration:none;
+}
+.node A:hover {
+	color:#202020; 
+	text-decoration:underline;
+}
+
+.leaf {
+	color:#202020;
+	font-family:"Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.leaf A:link {
+	color:#202020; 
+	text-decoration:none;
+}
+.leaf A:visited {
+	color:#202020; 
+	text-decoration:none;
+}
+.leaf A:active {
+	color:#202020; 
+	text-decoration:none;
+}
+.leaf A:hover {
+	color:#202020; 
+	text-decoration:underline;
+}

@@ -1,0 +1,99 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: title.html - HTML
+*Autor: Glauber M. Gallego - ggallego
+*Ultima Atualização: 01/10/2004
+************************************************/
+-->
+	
+<html>
+
+<head>
+	<title>Saiba Mais</title>
+
+	<meta http-equiv="Content-Language" content="pt-br" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<meta name="description" content="Página de controle do Joust Outliner, e ponto de entrada do site" />
+	<meta name="keywords" content="Joust Outliner" />
+	<meta name="revisit-after" content="30 days" />
+	<meta name="robots" content="NOINDEX" />
+
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" ID="JoustStyles" type="text/css" href="../css/jst.css" />
+	
+	<script type="text/javascript" src="../js/jst_title.js"></script>
+</head>
+
+<body class="title">
+
+	<img id="title_left" 
+		style="position:absolute;top:7px;left:20px;"
+		src="../imagens/saibamais/joust/title_left.gif">
+
+	<img id="borderdummy"
+		style="position:absolute;top:35px;left:183px;display:block;width:19px;height:1px;"
+		src="../imagens/saibamais/joust/title_borderdummy.gif"
+		alt="">
+
+	<img id="ttdummylinks"
+		style="position:absolute;top:35px;left:0px;display:none;width:5px;height:1px;"
+		src="../imagens/saibamais/joust/title_dummylinks.gif"
+		alt="">
+
+	<img id="title_right"
+		style="position:absolute;top:7px;left:268px;"
+		src="../imagens/saibamais/joust/title_right.gif">
+
+	<img id="treeImage"
+		style="position:absolute;top:8px;left:157px;display:none;width:19px;height:19px;"
+		src="../imagens/saibamais/joust/mnu_mostrar.gif"
+		alt="Mostra Menu"
+		onmouseover="return parent.setStatus('Mostra Menu');"
+		onmouseout="return parent.clearStatus();"
+		onclick="top.frames.menuCntrl.showmenu();"/>
+
+	<div id="navigationDial" style="display:block">
+		<a href="javascript:void(0);" id="goPrevItem">
+			<img id="prevImage"
+				style="position:absolute;top:15px;left:203px;width:19px;height:21px;" 
+				src="../imagens/saibamais/joust/dial_prev_off.gif"
+				alt="Página Anterior"
+				onmouseover="this.src='../imagens/saibamais/joust/dial_prev_on.gif';return parent.setStatus('Página Anterior');"
+				onmouseout="this.src='../imagens/saibamais/joust/dial_prev_off.gif';return parent.clearStatus();"
+				onclick="javascript:goPrevItem();return false;">
+		</a>
+		<a href="javascript:void(0);" id="goParentItem">
+			<img id="parentImage"
+				style="position:absolute;top:13px;left:222px;width:21px;height:12px;"
+				src="../imagens/saibamais/joust/dial_parent_off.gif"
+				alt="Item Pai"
+				onmouseover="this.src='../imagens/saibamais/joust/dial_parent_on.gif';return parent.setStatus('Item Pai');"
+				onmouseout="this.src='../imagens/saibamais/joust/dial_parent_off.gif';return parent.clearStatus();"
+				onclick="javascript:goParentItem();return false;">
+		</a>
+		<a href="javascript:void(0);" id="goItemTop">
+			<img id="topImage"
+				style="position:absolute;top:25px;left:222px;width:21px;height:11px;"
+				src="../imagens/saibamais/joust/dial_top_off.gif"
+				alt="Ir para o Topo"
+				onmouseover="this.src='../imagens/saibamais/joust/dial_top_on.gif';return parent.setStatus('Ir para o Topo');"
+				onmouseout="this.src='../imagens/saibamais/joust/dial_top_off.gif';return parent.clearStatus();"
+				onclick="javascript:top.frames.text.scrollTo(0,0);">
+		</a>
+		<a href="javascript:void(0);" id="goNextItem">
+			<img id="nextImage"
+				style="position:absolute;top:15px;left:243px;width:19px;height:21px;"
+				src="../imagens/saibamais/joust/dial_next_off.gif"
+				alt="Próxima Página"
+				onmouseover="this.src='../imagens/saibamais/joust/dial_next_on.gif';return parent.setStatus('Próxima Página');"
+				onmouseout="this.src='../imagens/saibamais/joust/dial_next_off.gif';return parent.clearStatus();"
+				onclick="javascript:goNextItem();return false;">
+		</a>
+	</div>	
+</body>

@@ -1,0 +1,469 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: bcotitu_acao_impBoleto.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 24/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Banco de Títulos - Boleto</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo fazer a impressão de Boleto do banco de títulos.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botão de Ação -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botão de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Click aqui para imprimir o Documento:
+			</td>
+			<td width="75%" class="valor">
+				Comando para impressão do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Recibo de Sacados - Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Ag. / Cod. Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV Cobrador / Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data do Documento:
+			</td>
+			<td width="75%" class="valor">
+				Data de emissão do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nosso Número:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título no banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número Documento:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título no cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Espécie Doc.:
+			</td>
+			<td width="75%" class="valor">
+				Espécie do título de cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Carteira:
+			</td>
+			<td width="75%" class="valor">
+				Código que identifica o tipo de carteira.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aceite:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de aceite.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Moeda:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de moeda da cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Nome do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Endereço:
+			</td>
+			<td width="75%" class="valor">
+				Endereço do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cidade:
+			</td>
+			<td width="75%" class="valor">
+				Cidade do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CEP:
+			</td>
+			<td width="75%" class="valor">
+				Número do CEP do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sacador/Avalista:
+			</td>
+			<td width="75%" class="valor">
+				Nome do Sacador/Avalista.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do sacador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Processamento:
+			</td>
+			<td width="75%" class="valor">
+				Data do registro do Boleto no sistema do Banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Texto de Responsabilidade do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Instruções para recebimento do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Vencimento:
+			</td>
+			<td width="75%" class="valor">
+				Data de vencimento do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor do Título:
+			</td>
+			<td width="75%" class="valor">
+				Valor do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Autenticação Mecânica:
+			</td>
+			<td width="75%" class="valor">
+				Autenticação do CAEX no banco.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="titulo" colspan="2">
+				Ficha de Compensação - Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Local de Pagamento:
+			</td>
+			<td width="75%" class="valor">
+				Local autorizado para pagamento do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data do Documento:
+			</td>
+			<td width="75%" class="valor">
+				Data de emissão do título pelo cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				No. do Documento:
+			</td>
+			<td width="75%" class="valor">
+				Número que identifica o título para o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Espécie:
+			</td>
+			<td width="75%" class="valor">
+				Espécie do título de cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aceite:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de aceite.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Processamento:
+			</td>
+			<td width="75%" class="valor">
+				Data do registro do título do sistema do banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Uso do Banco:
+			</td>
+			<td width="75%" class="valor">
+				Campo para uso exclusivo do banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Carteira:
+			</td>
+			<td width="75%" class="valor">
+				Código que identifica o tipo de carteira.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Moeda:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de moeda.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Quantidade:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de moeda variável associada ao título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor:
+			</td>
+			<td width="75%" class="valor">
+				Valor do título em reais (R$) após conversão da moeda variável.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Texto de Responsabilidade do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Instruções para recebimento do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Vencimento:
+			</td>
+			<td width="75%" class="valor">
+				Data de vencimento do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Agência / Código Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV Cobrador / Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nosso Número:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título no banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(=)Valor do Documento:
+			</td>
+			<td width="75%" class="valor">
+				Valor nominal do título em cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(-)Desconto:
+			</td>
+			<td width="75%" class="valor">
+				Valor do desconto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(-) Outras Deduções/Abatimento:
+			</td>
+			<td width="75%" class="valor">
+				Deduções/Abatimentos de outras origens.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(+) Mora/Multa/Juros:
+			</td>
+			<td width="75%" class="valor">
+				Valor de mora, multa e juros.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(+) Outros Acréscimos:
+			</td>
+			<td width="75%" class="valor">
+				Acréscimos de outras origens.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				(=) Valor Cobrado:
+			</td>
+			<td width="75%" class="valor">
+				Valor total a ser pago no Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Nome, CPF ou CNPJ e endereço do sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sacador/Avalista:
+			</td>
+			<td width="75%" class="valor">
+				Nome e Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do sacador/avalista.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+				
+	</table>		
+
+</BODY>
+
+</HTML>

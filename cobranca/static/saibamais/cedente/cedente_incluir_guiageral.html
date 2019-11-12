@@ -1,0 +1,349 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: cedente_incluir_guiageral.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 19/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top"><image src="../../imagens/diversos/outlineplus.gif" width="15"> Incluir Cedente - Guia Geral</image></A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão cadastrados os dados para identificação do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a inclusão dos dados na guia geral.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cancelar:
+			</td>
+			<td width="75%" class="valor">
+				Cancela a inclusão nesta guia e fecha-a.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Cobrança:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o tipo de cobrança.
+				<br>Se for "Convencional", a 'Guia Cedente Eletrônico' ficará como "Não Permitido", não podendo ser editada.
+	            <br>Se for "Convencional", o campo 'Cedente Centralizador' será desabilitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Protesto Automático:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona se protesto do título será automático ou não (D0).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Protesto:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para envio do título vencido ao cartório.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Devolução:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias, após vencimento, para devolução do título ao cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Extrato Mov. Títulos:
+			</td>
+			<td width="75%" class="valor">
+				Selecionar se tem extrato de movimentação de títulos ou não.
+				<br>Se este campo for "não", o campo 'Destino Extrato Mov.' será desabilitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Destino Extrato Mov.:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona modo de envio do extrato de movimetação de títulos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Extrato Mov. Déb./Créd.:
+			</td>
+			<td width="75%" class="valor">
+				Selecionar se tem extrato de movimentação para débitos e créditos ou não.
+				<br>Se este campo for "não", o campo 'Destino Extrato Déb./Créd.' será desabilitado.
+				<br>Este campo só poderá ser "sim" se o campo 'Extrato Mov. Títulos' for "sim".										
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Destino Extrato Déb./Créd.:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona modo de envio do extrato de movimetação para débitos/créditos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Inventário Mês:
+			</td>
+			<td width="75%" class="valor">
+				Selecionar se tem inventário do mês ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Juros Dia:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o tipo de juros por dia cobrado sobre o valor do título após o vencimento.
+				<br>Se o tipo de juros for "Juros Caixa" ou "Sem Juros", o campo 'Percentual Juros Dia' será desabilitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual Juros Dia:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de juros por dia cobrado sobre o valor do título após o vencimento.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Recebimento em Cheque:
+			</td>
+			<td width="75%" class="valor">
+				Se aceita recebimento em cheque ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual Multa:
+			</td>
+			<td width="75%" class="valor">
+				Percentual da multa cobrado sobre o valor do título após o vencimento.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo para Multa:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para cobrança da multa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Banco de Sacados:
+			</td>
+			<td width="75%" class="valor">
+				Se possui banco de sacados ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Conta Garantida:
+			</td>
+			<td width="75%" class="valor">
+				Se o cliente vai Descontar Títulos ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Externo:
+			</td>
+			<td width="75%" class="valor">
+				Se cliente externo ou não.
+				<br>Campo desabilitado para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Giro Caixa:
+			</td>
+			<td width="75%" class="valor">
+				Se utiliza GiroCaixa ou não.
+				<br>Campo desabilitado para Pessoa Física.
+				<br>Se for "Convencional" ou "Eletrônica", o campo 'Setor' terá apenas a opção "Privado Pessoa Jurídica".
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Setor:
+			</td>
+			<td width="75%" class="valor">
+				Setor de atuação da Pessoa Jurídica.
+				<br>Campo desabilitado para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Porte:
+			</td>
+			<td width="75%" class="valor">
+				Porte da empresa da Pessoa Jurídica.
+				<br>Campo desabilitado para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Natureza:
+			</td>
+			<td width="75%" class="valor">
+				Natureza do cliente Pessoa Jurídica.
+				<br>Campo desabilitado para Pessoa Física.
+				<br>Define as opções do campo 'Ramo de Atividade'.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Ramo de Atividade:
+			</td>
+			<td width="75%" class="valor">
+				Ramo de atividade da Pessoa Jurídica.
+				<br>Campo desabilitado para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Exclusão Automática:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona se exclusão automática do cedente da base, após dias sem movimentação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Modalidade de Título:
+			</td>
+			<td width="75%" class="valor">
+				Selecionar modalidade de título.
+				<br>Se for "Cobrança Caucionada", o campo 'Conta Caução' da 'Guia Contas Déb. Créd. e Rateio' é obrigatório.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV de Vinculação:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade PV de vinculação do cliente, onde foi contratada a cobrança.
+				<br>Este código é automaticamente preenchido com a mesma Unidade PV do filtro.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente Centralizador:
+			</td>
+			<td width="75%" class="valor">
+				Preenchido se o cedente for eletrônico.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Banco Correspondente:
+			</td>
+			<td width="75%" class="valor">
+				Código do banco correspondente que contratou a cobrança bancária CAIXA.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cobrança Sem Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Se cobrança sem boleto ou não.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Situação do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Indicador da situação do cedente, se em Teste ou Produção.
+			</td>
+		</tr>
+	</table>		
+
+</BODY>
+
+</HTML>

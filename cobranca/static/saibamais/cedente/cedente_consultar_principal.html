@@ -1,0 +1,1337 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: cedente_consultar_principal.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 20/01/2004
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Manter Cedente - Consulta Detalhada</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade é consultar o dados de cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Alterar:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para funcionalidade de alterar o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Exclui:
+			</td>
+			<td width="75%" class="valor">
+				Exclui o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de filtrar o cedente para manutenção. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código Cliente (COCLI):
+			</td>
+			<td width="75%" class="valor">
+				Código do cliente no SICLI.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Carteira:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador da carteira.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Pessoa:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de pessoa do cliente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Pessoa Jurídica ou da Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Razão Social:
+			</td>
+			<td width="75%" class="valor">
+				Nome completo da Pessoa Jurídica. Em caso de Pessoa Física este campo ficará em branco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				e-mail:
+			</td>
+			<td width="75%" class="valor">
+				E-mail do cliente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Endereço:
+			</td>
+			<td width="75%" class="valor">
+				Endereço do cliente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+	
+		<!--Guia Geral-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Geral</u></image>
+			</td>
+		</tr>
+			
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultados os dados para identificação do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Cobrança:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de cobrança.
+				<br>Se for "Convencional", a 'Guia Cedente Eletrônico' ficará como "Não Permitido", não podendo ser consultada.
+				<br>Se for "Convencional", o campo 'Cedente Centralizador' ficará vazio.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Protesto Automático:
+			</td>
+			<td width="75%" class="valor">
+				Se protesto automático ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Protesto:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para envio do título vencido ao cartório.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Devolução:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para devolução do título após vencimento.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Extrato Mov. Títulos:
+			</td>
+			<td width="75%" class="valor">
+				Se tem extrato de movimentação de títulos ou não.
+				<br>Se este campo for "não", o campo 'Destino Extrato Mov.' ficará vazio.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Destino Extrato Mov.:
+			</td>
+			<td width="75%" class="valor">
+				Modo de envio do extrato de movimentação de títulos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Extrato Mov. Déb./Créd.:
+			</td>
+			<td width="75%" class="valor">
+				Se tem extrato de movimentação para débitos e créditos ou não.
+				<br>Se este campo for "não", o campo 'Destino Extrato Déb./Créd.' ficará vazio.
+				<br>Este campo só poderá ser "sim" se o campo 'Extrato Mov. Títulos' for "sim".	
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Destino Extrato Déb./Créd.:
+			</td>
+			<td width="75%" class="valor">
+				Modo de envio do extrato de movimentação para débitos e créditos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Inventário Mês:
+			</td>
+			<td width="75%" class="valor">
+				Se tem inventário do mês ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Juros Dia:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de juros que será utilizado em caso de título pago após o vencimento, se for o caso.
+				<br>Se o tipo de juros for "Juros Caixa" ou "Sem Juros", o campo 'Percentual Juros Dia' ficará vazio.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual Juros Dia:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de juros por dia cobrado sobre o valor do título após o vencimento.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Recebimento em Cheque:
+			</td>
+			<td width="75%" class="valor">
+				Se aceita recebimento em cheque ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual Multa:
+			</td>
+			<td width="75%" class="valor">
+				Percentual da multa cobrado sobre o valor do título após o vencimento.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo para Multa:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para cobrança da multa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Banco de Sacados:
+			</td>
+			<td width="75%" class="valor">
+				Se possui banco de sacados ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Conta Garantida:
+			</td>
+			<td width="75%" class="valor">
+				Se o cliente vai Descontar Títulos ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Externo:
+			</td>
+			<td width="75%" class="valor">
+				Se é cliente externo ou não.
+				<br>Campo vazio para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cliente Giro Caixa:
+			</td>
+			<td width="75%" class="valor">
+				Se utiliza GiroCaixa ou não.
+				<br>Campo vazio para Pessoa Física.
+				<br>Se for "Convencional" ou "Eletrônica", o campo 'Setor' terá apenas a opção "Privado Pessoa Jurídica".
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Setor:
+			</td>
+			<td width="75%" class="valor">
+				Setor de atuação da Pessoa Jurídica.
+				<br>Campo vazio para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Porte:
+			</td>
+			<td width="75%" class="valor">
+				Porte da empresa da Pessoa Jurídica.
+				<br>Campo vazio para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Natureza:
+			</td>
+			<td width="75%" class="valor">
+				Natureza do cedente.
+				<br>Campo vazio para Pessoa Física.				
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Ramo de Atividade:
+			</td>
+			<td width="75%" class="valor">
+				Ramo de atividade da Pessoa Jurídica.
+				<br>Campo vazio para Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Exclusão Automática:
+			</td>
+			<td width="75%" class="valor">
+				Se exclusão automática do cedente da base, após dias sem movimentação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Modalidade de Título:
+			</td>
+			<td width="75%" class="valor">
+				Modalidade do título de cobrança.
+			</td> 
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV de Vinculação:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade PV de vinculação do cliente, onde foi contratada a cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente Centralizador:
+			</td>
+			<td width="75%" class="valor">
+				Preenchido se o cedente for eletrônico.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Banco Correspondente:
+			</td>
+			<td width="75%" class="valor">
+				Código do banco correspondente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cobrança Sem Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Se cobrança é sem boleto ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Situação do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Indicador da situação do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Float-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Float</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultadas as quantidades de dias para crédito na conta do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Padrão:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias padrão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Negociado:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias negociado com o cliente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Contas-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Contas</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultadas as contas do cedente para crédito, débito e rateio.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Conta Crédito:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade, operação, número e dígito da conta para crédito do cedente e esta será a conta para crédito principal.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Participação:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de participação para a conta de crédito principal.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Conta Débito:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade, operação, número e dígito da conta principal para débito das tarifas e serviços contratados pelo cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Participação:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de participação para a conta de débito principal.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Conta Caução:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade, operação, número e dígito da conta caução do cedente. Esta conta só será utilizada caso o cedente contrate a operação Caução de Títulos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Contas de rateio de valores:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade, operação, número e dígito da conta para rateio de valores.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Crédito:
+			</td>
+			<td width="75%" class="valor">
+				Percentual para rateio do crédito.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Crédito:
+			</td>
+			<td width="75%" class="valor">
+				Valor do crédito a ser rateado. 
+				<br>Se este campo estiver preenchido, o campo 'Perc. Participação' para o crédito ficará em branco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Débito:
+			</td>
+			<td width="75%" class="valor">
+				Percentual para rateio do débito.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Titular:
+			</td>
+			<td width="75%" class="valor">
+				Nome do titular da conta para rateio cadastrada.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Cedente Eletrônico-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Cedente Eletrônico</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia será consultado o modo de comunicação entre a CAIXA Econômica Federal e o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aplicativo:
+			</td>
+			<td width="75%" class="valor">
+				Aplicativo utilizado na transmissão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Transmissão:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de transmissão.
+				<br>Se for "Linha Dedicada" ou "Internet", o campo 'VAN' ficará vazio.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Padrão de Arquivo:
+			</td>
+			<td width="75%" class="valor">
+				Padrão de arquivo de transmissão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Agrupamento:
+			</td>
+			<td width="75%" class="valor">
+				Agrupamento de serviços.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Atribuição de VAN:
+			</td>
+			<td width="75%" class="valor">
+				Quem faz atribuição de VAN.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				VAN:
+			</td>
+			<td width="75%" class="valor">
+				VAN de comunicação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Junção Arquivo de Retorno:
+			</td>
+			<td width="75%" class="valor">
+				Se tem junção de arquivo de retorno ou não.
+				<br>Se for "não", o campo "Cedente Junção" ficará vazio. 
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente Junção:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente solicitante da junção de arquivo.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perfil Rejeição:
+			</td>
+			<td width="75%" class="valor">
+				Perfil de rejeição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Pré-Crítica:
+			</td>
+			<td width="75%" class="valor">
+				Se haverá pré-crítica ou não.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Apelido:
+			</td>
+			<td width="75%" class="valor">
+				Apelido para o arquivo retorno.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Arquivo de Retorno:
+			</td>
+			<td width="75%" class="valor">
+				Nome do arquivo de retorno.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cópia Arquivo Retorno:
+			</td>
+			<td width="75%" class="valor">
+				Se haverá cópia do arquivo de retorno.
+				<br>Se for "não", o campo 'Apelido (Cópia)' ficará vazio.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Caixa Postal:
+			</td>
+			<td width="75%" class="valor">
+				Número da caixa postal do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Apelido (Cópia):
+			</td>
+			<td width="75%" class="valor">
+				Apelido para a cópia do arquivo de retorno.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Arquivo de Retorno (Cópia):
+			</td>
+			<td width="75%" class="valor">
+				Nome para a cópia do arquivo de retorno.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número Próxima Remessa:
+			</td>
+			<td width="75%" class="valor">
+				Número da próxima remessa de arquivo a ser enviada pelo cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número Último Retorno:
+			</td>
+			<td width="75%" class="valor">
+				Número do último arquivo de retorno gerado pelo sistema para o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Boleto-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Boleto</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultadas as informações para o boleto.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Emissão de Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Emissor do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Envio do Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Modo de envio do boleto.
+				<br>Se for "E-Mail", o campo 'Aviso Disponib. Boleto' estará preenchido.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso ao Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Se envia aviso ao sacado ou não.
+				<br>Se for "não", os campos 'Envio do Aviso ao Sacado', 'Formas de Aviso', 'Valor Mínimo para Aviso' e 'Aviso Vencido' ficarão vazios.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Envio do Aviso ao Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Modo de envio do aviso ao sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Formas de Aviso:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o(s) aviso(s) que deseja enviar.
+				<br>Se for "Vencido", o campo 'Aviso Vencido' estará preenchido.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Mínimo para Aviso:
+			</td>
+			<td width="75%" class="valor">
+				Valor a ser considerado para emissão do aviso, faz referência ao valor nominal do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Quantidade de Emissões:
+			</td>
+			<td width="75%" class="valor">
+				Número de emissão do boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso Disponib. Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para aviso de disponibilidade de boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso Vencido:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para aviso de boleto vencido.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Mensagens para Boleto-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Mensagens para Boletos</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultadas as mensagens para serem inseridas nos boletos, se emitidos pela CAIXA.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		
+		<!--boleto Padrão-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<u><image src="../../imagens/diversos/twist_rg.gif" width="10"> Boleto Padrão:</image></u>
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Local de Impressão da Mensagem:
+			</td>
+			<td width="75%" class="valor">
+				Qual(is) local(is) saem a(s) impressão(ões).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Recibo do Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no Recibo do Sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Verso Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no verso do boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Ficha Compensação:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa na Ficha de Compensação.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--boleto Personalizado-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<u><image src="../../imagens/diversos/twist_rg.gif" width="10"> Boleto Personalizado:</image></u>
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Local de Impressão da Mensagem:
+			</td>
+			<td width="75%" class="valor">
+				Qual(is) local(is) saem a(s) impressão(ões).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Recibo do Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no Recibo do Sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Verso Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no verso do boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Ficha Compensação:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa na Ficha de Compensação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Recibo do Sacado A:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no Recibo do Sacado A (Modelos 10 e 11).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Recibo do Sacado B:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem impressa no Recibo do Sacado B (Modelo 11).
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--boleto Pré-Impresso-->
+		<tr>
+			<td class="titulo" colspan="2">
+			<u><image src="../../imagens/diversos/twist_rg.gif" width="10"> Boleto PRé-Impresso:</image></u>
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Local de Impressão da Mensagem:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona qual(is) local(is) devem sair a(s) impressão(ões).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Recibo do Sacado (A4):
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no Recibo do Sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Ficha Compensação (A4/Matricial):
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa na Ficha de Compensação do modelo matricial ou A4.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Banco Correspondente-->
+		<tr>
+			<td class="titulo" colspan="2">
+			<u><image src="../../imagens/diversos/twist_rg.gif" width="10"> Banco Correspondente:</image></u>
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem para ser impressa no Boleto.
+			</td>
+		</tr>		
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Tarifas-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Tarifas</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão consultadas as tarifas para o(s) boleto(s).
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Botoes da Guia-->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botão de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Verificar:
+			</td>
+			<td width="75%" class="valor">
+				Consulta de tarifas para o grupo selecionado.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Periodicidade da Tarifa:
+			</td>
+			<td width="75%" class="valor">
+				Como deverão ser efetuados os débitos na conta do cedente.
+				<br>Somente se for "mensal", o campo 'Dia do Débito' estará preenchido.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Dia do Débito:
+			</td>
+			<td width="75%" class="valor">
+				Dia para débito da(s) tarifa(s).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Forma de Cálculo:
+			</td>
+			<td width="75%" class="valor">
+				Forma de cálculo da tarifa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Grupo:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o grupo de tarifas que deseja consultar.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Verificar Tarifas-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<u>Verificar Tarifas:</u>
+			</td>
+		</tr>
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Serviço:
+			</td>
+			<td width="75%" class="valor">
+				Nome do serviço no grupo que será cobrada a tarifa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Orig.:
+			</td>
+			<td width="75%" class="valor">
+				Valor de tarifa padrão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Orig.:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de tarifa padrão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Calc.:
+			</td>
+			<td width="75%" class="valor">
+				Valor de tarifa negociado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Calc.:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de tarifa negociado.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Guia Conclusão-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Conclusão</u></image>
+			</td>
+		</tr>
+		
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia são consultados dados de conclusão da operação de inclusão e alteração do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				EN:
+			</td>
+			<td width="75%" class="valor">
+				Código do EN de cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data de Inclusão:
+			</td>
+			<td width="75%" class="valor">
+				Data de cadastro do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Última Alteração:
+			</td>
+			<td width="75%" class="valor">
+				Data da última alteração do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Responsável Alteração:
+			</td>
+			<td width="75%" class="valor">
+				Código do Usuário responsável pela alteração.
+			</td>
+		</tr>
+	</table>
+	
+</BODY>
+
+</HTML>

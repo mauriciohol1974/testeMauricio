@@ -1,0 +1,141 @@
+body  {
+	color : black;
+	font-family : Verdana;
+	font-size : 10pt;
+  font-style: normal;
+  font-weight: normal;
+	background-color : #FFFFFF;
+	background-attachment: fixed;
+	background-image: url(../imagens/saibamais/joust/title_turn_right.gif);
+	background-repeat: no-repeat;
+	margin-bottom : 1em;
+}
+
+h1, h2, h3, h4 {
+	font-family : Arial;
+	font-weight : bold;
+  font-style: normal;
+	background : transparent;
+}
+h1  {
+  color: #ff974a;
+  font-size: 20pt;
+	text-align : center;
+}
+h2  {
+	color : #00008b;
+	font-size : 18pt;
+	margin-left : 2%;
+	margin-right : 2%;
+}
+h3  {
+	color : #005baa;
+	font-size : 15pt;
+	margin-left : 4%;
+	margin-right : 4%;
+}
+h4  {
+	font-size : 12pt;
+	margin-left : 6%;
+	margin-right : 6%;
+}
+
+h5, h6  {
+	font-size : 11pt;
+	margin-left : 6%;
+	margin-right : 6%;
+}
+
+p {
+	font-family : Arial;
+	font-size : 8pt;
+	margin-left : 6%;
+	margin-right : 6%;
+}
+
+ul, ol, dt  {
+	margin-left : 10%;
+	margin-right : 6%;
+}
+dd {
+	margin-left : 13%;
+	margin-right : 1%;
+}
+dd dd, ul ul, ul ol, ol ul, ol ol {
+	margin-left : 3%;
+	margin-right : 1%;
+}
+
+pre  {
+	white-space : pre;
+	margin-left : 10%;
+	margin-right : 10%;
+}
+.code  {
+	font-family : "Courier New", "Courier", monospace;
+	font-size : 10pt;
+}
+blockquote {
+	margin-left : 5%;
+	margin-right : 5%;
+}
+
+table p, table dl, td p, ol p, ul p, dl p, blockquote p, li pre, dd pre  {
+	margin-left : 0;
+	margin-right : 0;
+}
+
+td p {
+	margin-top : 1em;
+}
+
+hr {
+	clear : both;
+}
+
+table {
+  font-size: 10pt;
+  cellspacing: 1;
+  padding: 1;
+}
+table.blueborder,
+{
+  font-size: 8pt;
+  border: 1 solid #0066cc	;
+  background-color:#FFFFFF;
+}
+
+A:link, A:visited, A:active, A:hover {
+  font-family: Verdana;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: normal;
+}
+A:link {
+  COLOR: #0039ba;
+}
+A:visited {
+  COLOR: #6c8bc3;
+}
+A:active {
+  COLOR: #ff6d00;
+}
+A:hover {
+  COLOR: #ff6d00;
+}
+
+img {
+	border:none;
+}
+
+
+td.titulo {
+  font-weight: bold;
+	color: 005baa;  
+}
+td.valor_enfase {
+  font-weight: bold;
+}
+td.valor {
+
+}

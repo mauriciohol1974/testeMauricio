@@ -1,0 +1,371 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: bordero_alterar.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 24/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Manter Borderô - Alterar</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo alterar o borderô.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a alteração do borderô.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de filtrar borderô para manutenção.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Pessoa Jurídica ou da Pessoa Física do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Pessoa:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de pessoa do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código Cliente (COCLI):
+			</td>
+			<td width="75%" class="valor">
+				Código do cliente no SICLI.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Borderô:
+			</td>
+			<td width="75%" class="valor">
+				Número do borderô.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Guia Borderô -->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Borderô:</u></image>
+			</td>
+		</tr>
+		<tr>
+			
+		<!-- Campos da Guia -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Somente para Protesto:
+			</td>
+			<td width="75%" class="valor">
+				Se borderô somente para protesto ou não.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Modalidade Título:
+			</td>
+			<td width="75%" class="valor">
+				Modalidade do título.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data do Movimento:
+			</td>
+			<td width="75%" class="valor">
+				Data da geração do borderô a ser alterado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV de Vinculação:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV vinculado do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Quantidade:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de títulos para o borderô.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor:
+			</td>
+			<td width="75%" class="valor">
+				Valor dos títulos cadastrados no borderô.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Endosso:
+			</td>
+			<td width="75%" class="valor">
+				Se endosso ou não.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Espécie de Título:
+			</td>
+			<td width="75%" class="valor">
+				Espécie do título de cobrança.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aceite:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de aceite.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Moeda:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de moeda.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Protesto Automático:
+			</td>
+			<td width="75%" class="valor">
+				Se protesto automático ou não.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo de Protesto/Devolução:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para protesto ou devolução do título.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Emissão Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Para selecionar quem será responsável pelo emissão do Boleto.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Envio do Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Modo de envio do Boleto ao sacado.
+				<br>Campo desabilitado para edição.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!-- Guia Dados Complementares -->
+		<tr>
+			<td class="titulo" colspan="2">
+				<image src="../../imagens/diversos/outlineplus.gif"><u>Guia Dados Complementares:</u></image>
+			</td>
+		</tr>
+		<tr>
+		
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botão de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Editar:
+			</td>
+			<td width="75%" class="valor">
+				Abre uma janela para edição do campo.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+			
+		<!-- Campos da Guia -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo Juros Dia:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o tipo de juros.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual Juros Mês:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de juros por mês.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual - Desconto/Multa:
+			</td>
+			<td width="75%" class="valor">
+				Percentual para desconto ou multa do título do borderô.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Dias - Prazo Limite/Prazo Multa:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para prazo limite do desconto ou para prazo multa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Mensagem Ficha de Compensação:
+			</td>
+			<td width="75%" class="valor">
+				Mensagem a ser impressa na ficha de compensação.
+			</td>
+		</tr>
+		
+	</table>		
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<menu-root name="sigcb-menu"
+	text="Sigcb Menu"
+	width="128"
+	acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1">
+
+	<!-- Menu cedente -->
+	<menu-item name="cedente"
+		text="Cedentes"
+		width="145"
+		acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBGER1;GCBOPE2;GCBOPE1;GCBSRE3;GCBSRE1;GCBSRE2;">
+
+		<!-- SubMenu cedente.cadastro -->
+		<menu-item name="cadastro"
+			text="Cadastro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBAIT;GCBAET;GCBGER1;GCBOPE2;GCBOPE1;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;">
+			<!-- SubMenu cedente.cadastro.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Cedente"
+				type="strategy"
+				action="cedente.CedenteIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2;GCBOPE1;GCBGER1"/>
+			<!-- SubMenu cedente.cadastro.manter -->
+			<menu-item
+				name="manter"
+				text="Manter Cedente"
+				type="strategy"
+				action="cedente.CedenteManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBGER1;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2">
+				<!-- Item cedente.cadastro.manter.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBGER1;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2"/>
+				<!-- Item cedente.cadastro.manter.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBATE;GCBAET;GCBGER1;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2"/>
+				<!-- Item cedente.cadastro.manter.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2"/>
+				<!-- Item cedente.cadastro.manter.enviarProducao -->
+				<internal-action name="enviarProducao" acess-groups="GCBMAS;GCBADM;GCBATE;GCBAET;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;"/> <!-- GCBMAS - grupo de teste somente em DEV-->
+				<!-- Item cedente.cadastro.manter.editar -->
+				<internal-action name="editar" acess-groups="GCBADM;GCBATI;GCBAIT;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;"/>
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu cedente.excepcionacao -->
+		<menu-item
+			name="excepcionacao"
+			text="Excepcionação"
+			type="strategy"
+			action="cedente.ExcepciManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE1;GCBSRE;GCBSRE1;GCBSRE;GCBSRE3">
+			<!-- Item cedente.excepcionacao.consultar -->
+			<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBOPE1;GCBSRE1;GCBSRE;GCBSRE3"/>
+			<!-- Item cedente.excepcionacao.acoes -->
+			<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBREC;GCBOPE;GCBRET;GCBOPE1;GCBSRE1;GCBSRE;GCBSRE3"/>
+			<!-- Item cedente.excepcionacao.acoes -->
+			<internal-action name="responder" acess-groups="GCBMAS;GCBADM;GCBSRE1;GCBSRE;GCBRET"/>
+		</menu-item>
+
+		<!-- SubMenu cedente.internet -->
+		<menu-item name="internet"
+			text="Cliente Internet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="180"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET">
+			<!-- SubMenu cedente.internet.usuario -->
+			<menu-item name="usuario"
+				text="Usuário &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="100"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBAIT;GCBAET">
+				<!-- SubMenu cedente.internet.usuario.incluir -->
+				<menu-item name="incluir"
+					text="Incluir Usuário"
+					type="strategy"
+					action="cedente.CliInteIncluirIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBOPE"/>
+				<!-- SubMenu cedente.internet.usuario.manter -->
+				<menu-item name="manter"
+					text="Manter Usuário"
+					type="strategy"
+					action="cedente.CliInteManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET">
+					<!-- Item cedente.internet.usuario.manter.consultar -->
+					<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET"/>
+					<!-- Item cedente.internet.usuario.manter.alterar -->
+					<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE"/>
+				</menu-item>
+			</menu-item>
+			<!-- SubMenu cedente.internet.perfil -->
+			<menu-item name="perfil"
+				text="Perfil Internet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="100"
+				acess-groups="GCBMAS;GCBADM">
+				<!-- SubMenu cedente.internet.perfil.incluir -->
+				<menu-item name="incluir"
+					text="Incluir Perfil"
+					type="strategy"
+					action="cedente.PerInteIncluirIniciar"
+					acess-groups="GCBMAS;GCBADM"/>
+				<!-- SubMenu cedente.internet.perfil.manter -->
+				<menu-item name="manter"
+					text="Manter Perfil"
+					type="strategy"
+					action="cedente.PerInteManterListar"
+					acess-groups="GCBMAS;GCBADM">
+					<!-- Item cedente.internet.perfil.manter.consultar -->
+					<internal-action name="consultar" acess-groups="GCBMAS;GCBADM"/>
+					<!-- Item cedente.internet.perfil.manter.consultar -->
+					<internal-action name="alterar" acess-groups="GCBMAS;GCBADM"/>
+				</menu-item>
+			</menu-item>
+		</menu-item>
+
+	</menu-item>
+
+	<!-- Menu servico -->
+	<menu-item name="servico"
+		text="Serviços"
+		width="175"
+		acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+
+		<!-- SubMenu servico.arqremessaretorno -->
+		<menu-item name="arqremessaretorno"
+			text="Remessa/Retorno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico arquivo -->
+			<menu-item name="arquivo"
+				text="Controle de Arquivos"
+				type="strategy"
+				action="servico.ArqRemeManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.arqremessaretorno.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.arqremessaretorno.acoes -->
+				<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBATE;GCBAET;GCBOPE;GCBOPE2"/>
+				<!-- SubMenu servico.arquivo -->
+			</menu-item>
+			<!-- SubMenu servico arquivo -->
+			<menu-item name="arquivoParcial"
+				text="Retorno Parcial"
+				type="strategy"
+				action="servico.RetornoParcialManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.arqremessaretorno.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.arqremessaretorno.acoes -->
+				<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBATE;GCBAET;GCBOPE2"/>
+				<!-- SubMenu servico.arquivo -->
+
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu servico.bancosacados -->
+		<menu-item name="bancosacados"
+			text="Banco de Sacados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="180"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.bancosacados.incluirbanco -->
+			<menu-item name="incluirbanco"
+				text="Incluir Banco de Sacados"
+				type="strategy"
+				action="servico.BcoSacaIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBOPE"/>
+			<!-- SubMenu servico.bancosacados.manterbanco -->
+			<menu-item name="manterbanco"
+				text="Manter Banco de Sacados"
+				type="strategy"
+				action="servico.BcoSacaManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.bancosacados.manterbanco.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.bancosacados.manterbanco.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+				<!-- Item servico.bancosacados.manterbanco.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			</menu-item>
+			<!-- SubMenu servico.bancosacados.incluirsacado -->
+			<menu-item name="incluirsacado"
+				text="Incluir Sacados"
+				type="strategy"
+				action="servico.SacadoIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.bancosacados.mantersacado -->
+			<menu-item name="mantersacado"
+				text="Manter Sacados"
+				type="strategy"
+				action="servico.SacadoManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.bancosacados.mantersacado.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.bancosacados.mantersacado.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+				<!-- Item servico.bancosacados.mantersacado.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			</menu-item>
+			<!-- SubMenu servico.bancosacados.incluirsolic -->
+			<menu-item name="incluirsolic"
+				text="Incluir Solic./Agend. de Título"
+				type="strategy"
+				action="servico.SoAgTitIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.bancosacados.mantersolic -->
+			<menu-item name="mantersolic"
+				text="Manter Solic./Agend. de Título"
+				type="strategy"
+				action="servico.SoAgTitManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.bancosacados.mantersolic.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.bancosacados.mantersolic.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+				<!-- Item servico.bancosacados.mantersolic.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu servico.bancotitulos -->
+		<menu-item name="bancotitulos"
+			text="Banco de Títulos"
+			type="strategy"
+			action="servico.BcoTituManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBTEC;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- Item servico.bancotitulos.consultar -->
+			<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+			<!-- Item servico.bancotitulos.alterar -->
+			<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			<!-- Item servico.bancotitulos.acoesprotesto -->
+			<internal-action name="acoesprotesto" acess-groups="GCBMAS;GCBADM;GCBRET;GCBCEN;GCBPAB;GCBOPE;GCBOPE2"/>
+			<!-- Item servico.bancotitulos.acoesoutros -->
+			<internal-action name="acoesoutros" acess-groups="GCBMAS;GCBADM;GCBRET;GCBREC;GCBOPE;GCBOPE2"/>
+		</menu-item>
+
+		<!-- SubMenu servico.bloqueto -->
+		<menu-item name="bloqueto"
+			text="Boletos On-Line &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.bloqueto.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Solicitação"
+				type="strategy"
+				action="servico.BloquetIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.bloqueto.manter -->
+			<menu-item name="manter"
+				text="Manter Solicitação"
+				type="strategy"
+				action="servico.BloquetManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.bloqueto.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.bloqueto.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+				<!-- Item servico.bloqueto.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu servico.bordero -->
+		<menu-item name="bordero"
+			text="Borderô On-Line &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.bordero.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Borderô"
+				type="strategy"
+				action="servico.BorderoIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.bordero.manter -->
+			<menu-item name="manter"
+				text="Manter Borderô"
+				type="strategy"
+				action="servico.BorderoManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.bordero.manter.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.bordero.manter.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+				<!-- Item servico.bordero.manter.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+		
+		
+		<!-- SubMenu servico.log Liquidação -->
+		<menu-item name="entradaOnLine"
+			text="LOG/Liquidação On-Line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.Titulo On Line.incluir -->
+			<menu-item name="incluirOnLine"
+				text="Incluir Solicitação"
+				type="strategy"
+				action="servico.TituloOnLineIncluir"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+			<!-- SubMenu servico.Titulo On Line.manter -->
+			<menu-item name="manterOnLine"
+				text="Manter Solicitação"
+				type="strategy"
+				action="servico.TituloOnLineManter"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+		</menu-item>
+		
+
+		<!-- SubMenu servico.liquidacoes -->
+		<menu-item name="liquidacoes"
+			text="Liquidações Rejeitadas"
+			type="strategy"
+			action="servico.LiqRejeManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- Item servico.liquidacoes.consultar -->
+			<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+			<!-- Item servico.liquidacoes.acoes -->
+			<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBRET;GCBSEC;GCBOPE2"/>
+		</menu-item>
+
+
+		<!-- SubMenu servico.liquidacoes via STR -->
+		<menu-item name="liquidacoesSTR"
+			text="Liquidações via STR"
+			type="strategy"
+			action="servico.LiqStrIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- Item servico.liquidacoes.consultar -->
+			<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+			<!-- Item servico.liquidacoes.acoes -->
+			<internal-action name="acoes" acess-groups="GCBADM"/>
+			<!-- Item servico.liquidacoes.acoes -->
+			<internal-action name="cancelar" acess-groups="GCBADM"/>
+		</menu-item>
+
+
+		<!-- SubMenu servico.protesto -->
+		<menu-item name="protesto"
+			text="Protesto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+
+			<!-- SubMenu servico.protesto.envioaocartorio -->
+			<menu-item name="envioaocartorio"
+				text="Envio ao Cartório - Lista"
+				type="strategy"
+				action="servico.ProtestEnvioAoCartorioIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.protesto.envioaocartorio.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.protesto.envioaocartorio.acoes -->
+				<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBRET;GCBREC;GCBCEN;GCBPAB;GCBOPE;GCBOPE2"/>
+			</menu-item>
+			<!-- SubMenu servico.protesto.sustageracaoarquivo -->
+			<menu-item name="sustageracaoarquivo"
+				text="SUSTA - Geração de Arquivo"
+				type="strategy"
+				action="servico.ProtestSustaGeracaoArquivoIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.protesto.sustageracaoarquivo.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.protesto.sustageracaoarquivo.acoes -->
+				<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBRET;GCBREC;GCBCEN;GCBPAB;GCBOPE;GCBOPE2"/>
+			</menu-item>
+			<!-- SubMenu servico.protesto.comandosportitulo -->
+			<menu-item name="comandosportitulo"
+				text="Comandos por Título"
+				type="strategy"
+				action="servico.ProtestAcaoIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.protesto.comandosportitulo.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCEN;GCBPAB;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.protesto.comandosportitulo.acoes -->
+				<internal-action name="acoes" acess-groups="GCBMAS;GCBADM;GCBRET;GCBREC;GCBCEN;GCBPAB;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu servico.segundaviaextrato -->
+		<menu-item name="segundaviaextrato"
+			text="Segunda Via de Extrato"
+			type="strategy"
+			action="servico.SolExtrManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- Item servico.segundaviaextrato.consultar -->
+			<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+			<!-- Item servico.segundaviaextrato.alterar -->
+			<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+			<!-- Item servico.segundaviaextrato.excluir -->
+			<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBOPE;GCBOPE2"/>
+		</menu-item>
+
+		<!-- SubMenu servico.tarifamanual -->
+		<menu-item name="tarifamanual"
+			text="Tarifa Comandada &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.tarifamanual.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Tarifa"
+				type="strategy"
+				action="servico.TarifaIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.tarifamanual.manter -->
+			<menu-item name="manter"
+				text="Manter Tarifa"
+				type="strategy"
+				action="servico.TarifaManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.tarifamanual.manter.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.tarifamanual.manter.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+		
+		<!-- SubMenu servico.Comando de Débito de Tarifas  -->
+		<menu-item name="comandoTarifa"
+			text="Comando de Débito de Tarifas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<!-- SubMenu servico.tarifamanual.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Comando de Débito de Tarifas"
+				type="strategy"
+				action="servico.TarifaIncluirComandoDebito"
+				acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			<!-- SubMenu servico.tarifamanual.manter -->
+			<menu-item name="manter"
+				text="Manter Comando de Débito de Tarifas"
+				type="strategy"
+				action="servico.TarifaManterComandoDebito"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+				<!-- Item servico.tarifamanual.manter.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2"/>
+				<!-- Item servico.tarifamanual.manter.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBRET;GCBOPE;GCBOPE2"/>
+			</menu-item>
+		</menu-item>
+		
+		
+		<!-- SubMenu servico.Titulo Garantia de Crédito-->
+		<menu-item name="titGarantia"
+			text="Títulos Garantia de Crédito &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			type="strategy"
+			action="servico.TituGarantiaManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			
+		</menu-item>
+		
+		
+
+		
+		
+		<menu-item name="ServBaixa"
+			text="Baixa Operacional &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			acess-groups="GCBADM;GCBRET">
+			<menu-item name="ServbaixaCIP"
+				text="Baixa Operacional"
+				type="strategy"
+				action="servico.ServicoBaixaOperacionalIniciar"
+				acess-groups="GCBADM;GCBRET">
+			</menu-item>
+			<menu-item name="ServbaixaCIPCancelar"
+				text="Cancelar Baixa Operacional"
+				type="strategy"
+				action="servico.ServicoCancelarBaixaOperacionalIniciar"
+				acess-groups="GCBADM;GCBRET">
+			</menu-item>			
+		</menu-item>
+		
+		
+		<menu-item name="icEconomicos"
+			text="Índices Econômicos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			acess-groups="GCBADM;GCBRET">
+			<menu-item name="incIndice"
+				text="Incluir Índice Econômico"
+				type="strategy"
+				action="servico.ServIndiceIncluirIniciar"
+				acess-groups="GCBADM;GCBRET">
+			</menu-item>
+			<menu-item name="manterIndice"
+				text="Manter Índice Econômico"
+				type="strategy"
+				action="servico.ServIndiceManterIniciar"
+				acess-groups="GCBADM;GCBRET">
+			</menu-item>
+			<menu-item name="ConsIndice"
+				text="Consultar Índice por Período"
+				type="strategy"
+				action="servico.ConsultarIndicePeriodoIniciar"
+				acess-groups="GCBADM;GCBRET">
+			</menu-item>			
+		</menu-item>
+		
+		
+		<menu-item name="reqDiversas"
+			text="Requisições &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			<menu-item name="reqRejeitadas"
+				text="Requisições Rejeitadas"
+				type="strategy"
+				action="servico.ReqRejeitadaIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			</menu-item>
+			
+			
+			<menu-item name="reqTitulo"
+				text="Requisições Título"
+				type="strategy"
+				action="servico.ReqTituloIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+			</menu-item>
+		</menu-item>
+			
+		
+		
+		<!-- SubMenu servico.Simulacao Negocia-->
+		<menu-item name="simuNegocial"
+			text="Simulador Negocial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+			type="strategy"
+			action="servico.SimuladorNegocialManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBOPE2">
+		</menu-item>
+		
+
+
+	</menu-item>
+
+	<!-- Menu consulta -->
+
+	<menu-item name="consulta"
+		text="Consultas"
+		width="170"
+		acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+
+		<!-- SubMenu consulta.geral -->
+		<menu-item name="geral"
+			text="Consultas Gerais &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="175"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+			<!-- SubMenu consulta.geral.cedcent -->
+			<menu-item name="cedcent"
+				text="Cedente Centralizador"
+				type="strategy"
+				action="consulta.CedCentManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.cedbcos -->
+			<menu-item name="cedbcos"
+				text="Cedentes com Bco Sacados"
+				type="strategy"
+				action="consulta.CedBcoSManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.girocai -->
+			<menu-item name="girocai"
+				text="GiroCaixa"
+				type="strategy"
+				action="consulta.GiroCaiManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.hisced -->
+			<menu-item name="hisced"
+				text="Histórico de Cedente"
+				type="strategy"
+				action="consulta.HisCedManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.lantari -->
+			<menu-item name="lantari"
+				text="Lançamento de Tarifa"
+				type="strategy"
+				action="consulta.LanTariManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.movtocobranca -->
+			<menu-item name="movtocobranca"
+				text="Movimento de Cobrança &nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="200"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+				<!-- SubMenu consulta.geral.movtocobranca.mcrenta -->
+				<menu-item name="mcrenta"
+					text="Cedentes por Rentabilidade"
+					type="strategy"
+					action="consulta.MCRentaManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.movtocobranca.mcextra -->
+				<menu-item name="mcextra"
+					text="Movimento do Cedente (Extrato)"
+					type="strategy"
+					action="consulta.MCExtraManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.movtocobranca.mctotai -->
+				<menu-item name="mctotai"
+					text="Movimento do Cedente (Totais)"
+					type="strategy"
+					action="consulta.MCTotaiManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.movtocobranca.mcrence -->
+				<menu-item name="mcrence"
+					text="Rentabilidade do Cedente"
+					type="strategy"
+					action="consulta.MCRenCeManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			</menu-item>
+			<!-- SubMenu consulta.geral.protest -->
+			<menu-item name="protest"
+				text="Protesto de Títulos"
+				type="strategy"
+				action="consulta.ProtestManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.salcob -->
+			<menu-item name="salcob"
+				text="Saldo de Cobrança"
+				type="strategy"
+				action="consulta.SalCobManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.servicossolicitados -->
+			<menu-item name="servicossolicitados"
+				text="Serviços Solicitados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="170"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+				<!-- SubMenu consulta.geral.servicossolicitados.servdia -->
+				<menu-item name="servdia"
+					text="Solicitações Dia"
+					type="strategy"
+					action="consulta.ServDiaManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.servicossolicitados.servpro -->
+				<menu-item name="servpro"
+					text="Solicitações Processadas"
+					type="strategy"
+					action="consulta.ServProManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.servicossolicitados.servrej -->
+				<menu-item name="servrej"
+					text="Solicitações Rejeitadas"
+					type="strategy"
+					action="consulta.ServRejManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<menu-item name="servsolic"
+					text="Comandos de Débito de Tarifas"
+					type="strategy"
+					action="consulta.DebitoTarifaManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			</menu-item>
+			<!-- SubMenu consulta.geral.tarflen --><!-- AL 18/12/06 - Alteração de EN p/ SR / Capuano -->
+			<menu-item name="tarflen"
+				text="Tarifas por Float e SR"
+				type="strategy"
+				action="consulta.TarFlEnManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBDDA;GCBATI;GCBATE;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.titalte -->
+			<menu-item name="titalte"
+				text="Títulos Alterados"
+				type="strategy"
+				action="consulta.TitAlteManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.titliq -->
+			<menu-item name="titliq"
+				text="Títulos Liquidados"
+				type="strategy"
+				action="consulta.TitLiqManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.titliqd -->
+			<menu-item name="titliqd"
+				text="Títulos Liquidados no Dia"
+				type="strategy"
+				action="consulta.TitLiqDManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.titliqd -->
+			<menu-item name="titliqiof"
+				text="Títulos Liquidados c/ IOF"
+				type="strategy"
+				action="consulta.TitLiqIOFManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+
+			<!-- SubMenu consulta. Liquidacoes STR -->
+			<menu-item name="servicosSTR"
+				text="Títulos Liquidados via STR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="170"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+				<!-- SubMenu consulta.STR RECEBIDAS -->
+				<menu-item name="strRecebidas"
+					text="Liquidações via STR Recebidas"
+					type="strategy"
+					action="consulta.ConsultaLiqStrIniciarRecebidas"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.DEVOLVIDAS -->
+				<menu-item name="strDevolvidas"
+					text="Liquidações via STR Devolvidas"
+					type="strategy"
+					action="consulta.ConsultaLiqStrIniciarDevolvidas"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				
+								
+			</menu-item>
+
+
+			<!-- SubMenu consulta.geral.vallanc -->
+			<menu-item name="vallanc"
+				text="Valores Lanç. C/Corrente"
+				type="strategy"
+				action="consulta.ValLancManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<menu-item name="vallanc"
+				text="Cedentes Rejeitados SICLI"
+				type="strategy"
+				action="consulta.CedRejeitadoSicliFiltro"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- SubMenu consulta.geral.titulosdda -->
+			<menu-item name="servicostitdda"
+				text="Títulos DDA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="170"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+				<!-- SubMenu consulta.geral.dda.incluidos -->
+				<menu-item name="ddaincluidos"
+					text="Incluídos"
+					type="strategy"
+					action="consulta.DdaTitIncluidoIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.dda.incluidosRejeitados -->
+				<menu-item name="ddaincluidosrej"
+					text="Incluídos Rejeitados"
+					type="strategy"
+					action="consulta.DdaTitIncluidoRejIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.dda.alterados -->
+				<menu-item name="ddaalterados"
+					text="Alterados"
+					type="strategy"
+					action="consulta.DdaTitAlteradoIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.dda.alteradosRejeitados -->
+				<menu-item name="ddaalteradosrej"
+					text="Alterados Rejeitados"
+					type="strategy"
+					action="consulta.DdaTitAlteradoRejIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.dda.baixados -->
+				<menu-item name="ddabaixados"
+					text="Baixados"
+					type="strategy"
+					action="consulta.DdaTitBaixadoIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.geral.dda.baixadosRejeitados -->
+				<menu-item name="ddabaixadosrej"
+					text="Baixados Rejeitados"
+					type="strategy"
+					action="consulta.DdaTitBaixadoRejIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			</menu-item>
+			<!-- SubMenu consulta.Correlacao SINCR -->
+			
+			<menu-item name="clienteSINCE"
+				text="Cliente SINCE"
+				type="strategy"
+				action="consulta.ClienteSINCEIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+
+			
+			<menu-item name="cedenteMasterPEC"
+				text="Cedente Master PEC"
+				type="strategy"
+				action="consulta.CedenteMasterPECIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				
+			<menu-item name="cedentePropostas"
+				text="Cedentes Propostas"
+				type="strategy"
+				action="consulta.CedentePropostasIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				
+			<menu-item name="titulosPropostas"
+				text="Títulos Propostas"
+				type="strategy"
+				action="consulta.TitulosPropostasIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				
+
+
+			<!-- SubMenu consulta. Baixa -->
+			<menu-item name="baixaOperEfe"
+				text="Baixa Operacional/Efetiva &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+				width="170"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+				<!-- SubMenu consulta.STR RECEBIDAS -->
+				<menu-item name="baixaOperacional"
+					text="Baixa Operacional"
+					type="strategy"
+					action="consulta.BaixaOperacionalManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				<!-- SubMenu consulta.DEVOLVIDAS -->
+				<menu-item name="strDevolvidas"
+					text="Baixa Efetiva"
+					type="strategy"
+					action="consulta.BaixaEfetivaManterIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+				
+								
+			</menu-item>
+			
+			<menu-item name="trilhaAuditoria"
+				text="Trilha de Auditoria"
+				type="strategy"
+				action="consulta.TrilhaAuditoriaManter"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			
+					
+					
+			</menu-item>			
+
+
+		<!-- SubMenu consulta.gerencial -->
+		<menu-item name="gerencial"
+			text="Consultas Gerenciais"
+			type="strategy"
+			action="consulta.GerencManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+
+		<!-- SubMenu consulta.operacionais -->
+		<menu-item name="contabil"
+			text="Consultas Operacionais"
+			type="strategy"
+			action="consulta.ContabManterIniciar"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+			<!-- Item consulta.contabil.operacional -->
+			<internal-action name="operacional" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- Item consulta.contabil.saldo -->
+			<internal-action name="saldo" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			<!-- Item consulta.contabil.posicao -->
+			<internal-action name="posicao" acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+		</menu-item>
+		
+				<!-- SubMenu consulta.gerencial -->
+		<menu-item name="consultaRel"
+			text="Consultas Relatórios Auditoria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="170"
+			acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3">
+		
+					<menu-item name="consProDt"
+					text="Produto"
+					type="strategy"
+					action="consulta.ConsProdIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+					
+					<menu-item name="consUnidade"
+					text="Agência"
+					type="strategy"
+					action="consulta.ConsAgenciaIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+					
+					<menu-item name="consBeneficiario"
+					text="Beneficiário"
+					type="strategy"
+					action="consulta.ConsCedenteIniciar"
+					acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+			
+		</menu-item>
+			
+	</menu-item>
+
+	<!-- Menu parametro -->
+
+	<menu-item name="parametro"
+		text="Parâmetros"
+		width="170"
+		acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBSRE3">
+
+		<!-- SubMenu parametros.agrupamento -->
+		<menu-item name="agrupamento"
+			text="Agrupamento Serviços &nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM">
+			<!-- SubMenu parametros.agrupamento.incluir -->
+			<menu-item name="incluir"
+				text="Incluir Agrupamento"
+				type="strategy"
+				action="parametro.AgrupIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM"/>
+			<!-- SubMenu parametros.agrupamento.manter -->
+			<menu-item name="manter"
+				text="Manter Agrupamento"
+				type="strategy"
+				action="parametro.AgrupManterIniciar"
+				acess-groups="GCBMAS;GCBADM">
+				<!-- Item parametros.agrupamento.incluir.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM"/>
+				<!-- Item parametros.agrupamento.incluir.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM"/>
+			</menu-item>
+		</menu-item>
+
+		<!-- SubMenu parametros.pvcobrador -->
+		<menu-item name="pvcobrador"
+			text="PV Cobrador &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;"
+			width="130"
+			acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBDDA;GCBAIT;GCBAET">
+			<!-- SubMenu parametros.pvcobrador.incluir -->
+			<menu-item name="incluir"
+				text="Incluir PV"
+				type="strategy"
+				action="parametro.PvCobIncluirIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBREC;GCBRET"/>
+			<!-- SubMenu parametros.pvcobrador.manter -->
+			<menu-item name="manter"
+				text="Manter PV"
+				type="strategy"
+				action="parametro.PvCobManterIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBDDA;GCBAIT;GCBAET">
+				<!-- Item parametros.pvcobrador.manter.consultar -->
+				<internal-action name="consultar" acess-groups="GCBMAS;GCBADM;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBDDA;GCBAIT;GCBAET"/>
+				<!-- Item parametros.pvcobrador.manter.alterar -->
+				<internal-action name="alterar" acess-groups="GCBMAS;GCBADM;GCBREC;GCBRET"/>
+				<!-- Item parametros.pvcobrador.manter.excluir -->
+				<internal-action name="excluir" acess-groups="GCBMAS;GCBADM;GCBREC;GCBRET"/>
+			</menu-item>
+		</menu-item>
+		
+		<menu-item name="consCep"
+				text="Consulta CEP"
+				type="strategy"
+				action="parametro.ConsultaCEPIniciar"
+				acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBCON;GCBCEN;GCBPAB;GCBTEC;GCBDDA;GCBAIT;GCBAET;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1;GCBSRE;GCBSRE3"/>
+	
+		
+		
+	</menu-item>
+
+
+
+	<!-- Menu Saiba Mais -->
+	<menu-item name="saibamais"
+		text="Saiba Mais"
+		type="javascript"
+		action="opensaibamais"
+		acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1"/> 
+
+	<!-- Menu Sair -->
+	<menu-item name="sair"
+		text="Sair"
+		type="javascript"
+		action="opensair"
+		acess-groups="GCBMAS;GCBADM;GCBDIR;GCBGER;GCBAUD;GCBRET;GCBREC;GCBOPE;GCBINC;GCBSEC;GCBATI;GCBTCX;GCBATE;GCBTEC;GCBPAB;GCBCEN;GCBCON;GCBDDA;GCBAIT;GCBAET;GCBSRE;GCBSRE3;GCBSRE1;GCBSRE2;GCBAUD1;GCBAIT1;GCBOPE1;GCBOPE2;GCBGER1"/>
+
+</menu-root>

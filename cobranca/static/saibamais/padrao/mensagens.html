@@ -1,0 +1,66 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: mensagens.html - HTML
+*Autor: Glauber M. Gallego - ggallego
+*Ultima Atualização: 01/10/2004
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">2.2. Mensagens do Sistema</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<!-- Texto -->
+	<table>
+		<tr>
+			<td class="valor">
+				As mensagens ao usuário, utilizadas pelo sistema, serão apresentadas em dois padrões:
+				<ul>
+					<li>Tela própria: Mensagens de críticas de regras de negócio ou de sucesso na operação. 
+							Possuem botão voltar, caso sejam críticas de regras de negócio, 
+							permitem ao usuário corrigir informações e reprocessar a funcionalidade,
+							caso seja sucesso na operação permite retornar a funcionalidade inicial.
+					<br>
+					<li>Caixa de mensagem: Mensagens de críticas de 'tela'.
+							Exigem que o usuário tome uma ação (ex.: preencher um campo) 
+							para processar a funcionalidade.
+							Estas caixas de mensagem são utilizadas também para tomada de decisão
+							(ex.: deseja realmente excluir este item?).
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+</BODY>
+
+</HTML>

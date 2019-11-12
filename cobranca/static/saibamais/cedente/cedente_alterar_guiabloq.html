@@ -1,0 +1,175 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: cedente_alterar_guiabloq.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 20/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top"><image src="../../imagens/diversos/outlineplus.gif" width="15"> Alterar Cedente - Guia Boleto</image></A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão alteradas as informações para o Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a alteração dos dados na guia Boletos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cancelar:
+			</td>
+			<td width="75%" class="valor">
+				Cancela a inclusão nesta guia e fecha-a.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Emissão de Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona quem emite o Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Envio do Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona modo de envio do Boleto.
+				<br>Se for "E-Mail", o campo 'Aviso Disponib. Boleto' será habilitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso ao Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona se envia aviso ao sacado ou não.
+				<br>Se for "não", os campos 'Envio do Aviso ao Sacado', 'Formas de Aviso', 'Valor Mínimo para Aviso' e 'Aviso Vencido' serão desabilitados.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Envio do Aviso ao Sacado:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona modo de envio do aviso ao sacado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Formas de Aviso:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o(s) aviso(s) que deseja enviar.
+				<br>Se for "Vencido", o campo 'Aviso Vencido' será habilitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Mínimo para Aviso:
+			</td>
+			<td width="75%" class="valor">
+				Valor a ser considerado para emissão do aviso, faz referência ao valor nominal do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Quantidade de Emissões:
+			</td>
+			<td width="75%" class="valor">
+				Número de emissão do Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso Disponib. Boleto:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para aviso de disponibilidade de Boleto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aviso Vencido:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para aviso de Boleto vencido.
+			</td>
+		</tr>
+	</table>		
+
+</BODY>
+
+</HTML>

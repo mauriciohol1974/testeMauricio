@@ -1,0 +1,236 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: cedente_incluir_guiatarifa.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 20/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top"><image src="../../imagens/diversos/outlineplus.gif" width="15"> Incluir Cedente - Guia Tarifas</image></A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição da Guia:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Nesta guia serão cadastradas as tarifas para o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes da Guia-->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Informar:
+			</td>
+			<td width="75%" class="valor">
+				Cadastro de tarifas para o grupo selecionado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a inclusão dos dados na guia tarifas.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cancelar:
+			</td>
+			<td width="75%" class="valor">
+				Cancela a inclusão nesta guia e fecha-a.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Periodicidade da Tarifa:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona como deverão ser efetuados os débitos na conta do cedente.
+				<br>O campo 'Dia do Débito' estará habilitado para edição, somente se a opção for "mensal".
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Dia do Débito:
+			</td>
+			<td width="75%" class="valor">
+				Dia para débito da(s) tarifa(s).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Forma de Cálculo:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona forma de cálculo da tarifa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Grupo:
+			</td>
+			<td width="75%" class="valor">
+				Seleciona o grupo de tarifas que deseja informar.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Informar Tarifas-->
+		<tr>
+			<td class="titulo" colspan="2">
+				<u>Informar Tarifas:</u>
+			</td>
+		</tr>
+		
+		<!-- Botoes do Informar-->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a inclusão das tarifas no grupo selecionado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cancelar:
+			</td>
+			<td width="75%" class="valor">
+				Cancela a inclusão e fecha o grupo.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Campos do Informar-->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Serviço:
+			</td>
+			<td width="75%" class="valor">
+				Nome do serviço no grupo que será cobrada tarifa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Orig.:
+			</td>
+			<td width="75%" class="valor">
+				Valor de tarifa padrão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Orig.:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de tarifa padrão.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Calc.:
+			</td>
+			<td width="75%" class="valor">
+				Valor de tarifa negociado.
+				<br>Ao alterar o valor, o campo 'Perc. Calc.' é calculado automaticamente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Perc. Calc.:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de tarifa negociado.
+				<br>Ao alterar o percentual, o campo 'Valor Calc.' é calculado automaticamente.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+				
+	</table>		
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,69 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: navegacao.html - HTML
+*Autor: Glauber M. Gallego - ggallego
+*Ultima Atualização: 01/10/2004
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">2.1. Padrões de Navegação</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<!-- Texto -->
+	<table>
+		<tr>
+			<td class="valor">
+				Para acesso as funcionalidades do sistema, será utilizado o seguinte padrão de navegação:
+				<ol>
+					<li> Realizar <a href="login.html">login</a> no sistema;
+					<li> Acessar a tela de <a href="menu.html">menu</a> no sistema;
+					<li> Selecionar uma das <a href="../init/home.html#funcionalidades">funcionalidades</a> que aparecem no menu;
+					<li> A tela da funcionalidade será exibida;
+					<li> No processamento da funcionalidade, podem ser exibidas 
+							<a href="mensagens.html">mensagens</a> do sistema ao usuário;
+					<li> Caso ocorram erros no processamento, será exibida tela padronizada de 
+							<a href="erros.html">erro</a>. 
+					<li> Dúvidas sobre a funcionalidade podem ser esclarecidas na funcionalidade
+					    <a href="saibamais.html">saiba mais</a>. 
+					<li> Para sair do sistema é indicado executar a funcionalidade <a href="sair.html">sair</a>.
+				</ol>
+				<br><br>
+				
+			</td>
+		</tr>
+	</table>
+
+</BODY>
+
+</HTML>

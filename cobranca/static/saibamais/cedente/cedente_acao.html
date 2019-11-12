@@ -1,0 +1,312 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: cedente_acao.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 03/11/2004
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Manter Cedente - Ações</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+	
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade é de ações para manutenção do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de filtrar o cedente para manutenção.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código do Cliente (COCLI):
+			</td>
+			<td width="75%" class="valor">
+				Código do cliente no SICLI.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Carteira:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador da carteira.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Pessoa:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de pessoa do cliente (Física ou Jurídica).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica).
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Pessoa Jurídica ou da Pessoa Física.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Razão Social:
+			</td>
+			<td width="75%" class="valor">
+				Nome completo da Pessoa Jurídica. Em caso de Pessoa Física este campo ficará em branco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				e-mail:
+			</td>
+			<td width="75%" class="valor">
+				E-mail do cliente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Endereço:
+			</td>
+			<td width="75%" class="valor">
+				Endereço do cliente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Espécie Título:
+			</td>
+			<td width="75%" class="valor">
+				Espécie do título de cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Qtd Vencidos:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de títulos vencidos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Vencidos:
+			</td>
+			<td width="75%" class="valor">
+				Valor de títulos vencidos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Qtd Vencendo no dia:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de títulos vencendo no dia.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Vencendo no dia:
+			</td>
+			<td width="75%" class="valor">
+				Valor de títulos vencendo no dia.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Qtd a Vencer:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de títulos a vencer.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor a Vencer:
+			</td>
+			<td width="75%" class="valor">
+				Valor de títulos a vencer.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Qtd Liquidados no dia:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de títulos liquidados no dia.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Liquidado no dia:
+			</td>
+			<td width="75%" class="valor">
+				Valor de títulos liquidados no dia.
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+		
+		<!--Ações-->
+		<tr>
+			<td class="titulo" colspan="2">
+				Ações:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Banco de Títulos:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de filtrar banco de títulos.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Consultas Gerencias:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de filtrar consultas gerenciais.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Consultar Dados do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de consultar cedente para manutenção.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Incluir Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de incluir cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Manter Dados do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de alterar cedente para manutenção.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Consultar Rentabilidade do Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de rentabilidade do cliente para consultas gerais.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Consultar Movimento Mensal (Totais):
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de movimento mensal por totais para consultas gerais.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Consultar Movimento Mensal (Extrato):
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para a funcionalidade de movimento mensal por extrato para consultas gerais.
+			</td>
+		</tr>
+	</table>		
+
+</BODY>
+
+</HTML>

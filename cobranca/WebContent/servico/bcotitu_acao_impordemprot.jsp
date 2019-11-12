@@ -1,0 +1,592 @@
+<%
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Agosto de 2004
+*Projeto CAIXA - SIGCB
+*Componente: bcotitu_manter_filtro.jsp - Java Server Pages
+*Autor: Antonio Nestor Fusel - afusel@sao.politec.com.br
+*Autor: Glauber M. Gallego - ggallego@sao.politec.com.br
+*Ultima Atualização: 21/09/2004
+************************************************/
+%>
+<%//EAM 09/09/05 - Desabilitar o cache dessas páginas no proxy,
+//pois não foi utilizado o esquema de páginas "jump"
+response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+response.setHeader("Pragma","no-cache"); //HTTP 1.0
+response.setDateHeader ("Expires", -1); //previne o cache pelo proxy
+%>
+<script language="javascript">
+	history.go(+1);
+</script>
+
+<%@taglib uri="/WEB-INF/tagsPolitec.tld" prefix="p"%>
+<%@taglib uri="/WEB-INF/tagsSigcb.tld" prefix="s"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="br.gov.caixa.sigcb.util.Paths"%>
+<%@page import="br.gov.caixa.sigcb.util.Formatador"%>
+<%@page import="br.gov.caixa.sigcb.bean.TituloBean"%>
+<%@page import="br.gov.caixa.sigcb.bean.CedenteCabecaBean"%>
+<%@page import="br.gov.caixa.sigcb.estrategia.servico.BcoTituEstrategia"%>
+	
+<%
+	CedenteCabecaBean cedCabBean = (session.getAttribute(BcoTituEstrategia.CEDENTE_CABECALHO_BEAN)==null?new CedenteCabecaBean():(CedenteCabecaBean)session.getAttribute(BcoTituEstrategia.CEDENTE_CABECALHO_BEAN));
+	TituloBean tituloBean = (session.getAttribute(BcoTituEstrategia.DATA_BEAN)==null?new TituloBean():(TituloBean)session.getAttribute(BcoTituEstrategia.DATA_BEAN));	
+%>
+<html>
+<s:HeaderPopup/>
+
+<p:Document>
+	<s:FormStrategy name="frmMain" action="SigcbControle" 
+		estrategia="<%BcoTituEstrategia.STRATEGY_MANTER_INICIAR%>" 
+		fluxo="normal">
+		
+	  <table width="650" border="0" cellspacing="0" cellpadding="0" align="center">
+			<tr> 
+				<td colspan="2" align="center">
+					<a href="javascript: printPage()">
+						<input type="text" name="printText" size="40" style="font-family: Arial; border-width:0px; font-weight: bold" value="Click aqui para imprimir o Documento:" disabled><img name="printGif" src="<%=Paths.getImagePath()%>/print.gif" border="0">
+					</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+			</tr>
+
+      <tr> 
+        <td valign="top" width="95%" height="14" align="left"> 
+    	    <table width="100%" border="0" cellspacing="2" cellpadding="0" valign="middle" align="center">
+	          <tr>
+	          	<td width="70%">
+			        	<table width="100%" border="0" cellspacing="0" cellpadding="2" valign="top" align="center">
+			          	<tr>
+			          		<td>
+						        	<table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_title_1" width="75%">
+						          			CAIXA ECONÔMICA FEDERAL
+						          		</td>
+						          		<td nowrap class="box_title_1 width="25%">
+						          			|104|
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						        	<table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Sacado / Praça de Pagamento / Endereço / CGC/CPF
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=tituloBean.getPrinciSacadoNome()%><br>
+						          			&nbsp;<%=tituloBean.getPrinciSacadoLogradouro()%>,<%=tituloBean.getPrinciSacadoNumero()%>-<%=tituloBean.getPrinciSacadoComplemento()%><br>
+						          			&nbsp;<%=tituloBean.getPrinciSacadoBairro()%>, <%=tituloBean.getPrinciSacadoMunicipio()%>, <%=tituloBean.getPrinciSacadoUf()%><br>
+						          			&nbsp;CEP: <%=tituloBean.getPrinciSacadoCepFormatado()%> - <%=(tituloBean.getPrinciSacadoTipoPessoa().equals(new Long(1))?"CPF: " : "CNPJ: ")%> <%=tituloBean.getPrinciSacadoCpfCnpjFormatado()%><br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						        	<table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Cedente / Endereço / CGC/CPF
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=cedCabBean.getNomeFantasia()%><br>
+						          			&nbsp;<%=cedCabBean.getLogradouro()%>,<%=cedCabBean.getNumero()%>-<%=cedCabBean.getComplemento()%><br>
+						          			&nbsp;<%=cedCabBean.getBairro()%>, <%=cedCabBean.getMunicipio()%>, <%=cedCabBean.getUf()%><br>	
+						          			&nbsp;CEP: <%=cedCabBean.getCepFormatado()%> - <%=(cedCabBean.getTipoPessoa().equals(new Long(1)) ? "CPF: " : "CNPJ: ")%><%=cedCabBean.getCpfCnpjFormatado()%><br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						        	<table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td width="87%">
+									        	<table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Agência Cobradora
+									          		</td>	
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;<%=tituloBean.getPrinciPvCobradorFormatado()%> - <%=tituloBean.getPrinciDescricaoPvCobrador()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="13%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;** Endosso
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp; <%=(tituloBean.getPrinciEndosso().equals("S") ? "T" : "M")%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Sacador
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			<%-- &nbsp;O MESMO --%>
+						          			&nbsp;<%=tituloBean.getCompleSacadorNome()%><br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td width="10%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Ag. centr.
+									          		</td>	
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="20%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Tipo Moeda
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;<%=tituloBean.getPrinciMoedaTexto()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="40%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Quantidade
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="10%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Aceite
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp; <%=tituloBean.getPrinciSiglaAceite()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="20%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Data Movimento
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp; <%=tituloBean.getOrdProtDataMovimentoFormatada()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td width="5%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;* Esp.
+									          		</td>	
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;<%=tituloBean.getPrinciSiglaEspecie()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="20%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Data Emissão
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp; <%=tituloBean.getAbatiDataEmissaoFormatada()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="20%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Data Entrada
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp; <%=tituloBean.getAbatiDataEntradaFormatada()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="55%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Valor por dia de atraso
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Instruções
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;VALORES EXPRESSOS EM REAIS
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Ilmo Sr.<br>
+						          			&nbsp;OFICIAL DO CARTÓRIO DE PROTESTO DE TÍTULOS<br>
+						          			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Na qualidade de portador, solicitamos a fineza de protestar, por falta de pagamento, o título acima<br>
+						          			&nbsp;caracterizado. Caso o título se encontre em poder do sacado, o protesto deverá ser efetuado por falta<br>
+						          			&nbsp;de aceite, de acordo com a Lei no. 5,474, de 18.07.68, alterada pelo Descreto Lei no. 436, de 27.01.69.<br>
+						          			&nbsp;<br>
+						          			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atenciosamente,<br>
+						          			&nbsp;CAIXA ECONÔMICA FEDERAL ___/___/___ _______________________________________
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          </table>
+							</td>
+							<td width="30%">
+			          <table width="100%" border="0" cellspacing="0" cellpadding="2" valign="top" align="center">
+									<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_title_3" width="75%">
+						          			ORDEM DE PROTESTO
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+									</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Vencimento
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=tituloBean.getPrinciDataVencimentoFormatada()%>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Agência / Código Cedente
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=tituloBean.getPrinciPvVinculacaoFormatado()%> / <%=tituloBean.getCodigoCedenteFormatado()%>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td width="20%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Cart.
+									          		</td>	
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;<%--=tituloBean.getPrinciModalidade()--%><%=tituloBean.getNossoNumeroCcFormatado()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          		<td width="80%">
+									          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+									          	<tr>
+									          		<td nowrap class="box_subtitle_1">
+									          			&nbsp;Nosso Número
+									          		</td>
+									          	</tr>
+									          	<tr>
+									          		<td class="box_fill">
+									          			&nbsp;<%--=tituloBean.getNossoNumeroFormatado()--%><%=tituloBean.getNossoNumeroQuinzeFormatado()%>
+									          		</td>
+									          	</tr>
+									          </table>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;No. Título
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=tituloBean.getPrinciNumeroDocumento()%>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Valor do Título / A protestar
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;<%=tituloBean.getPrinciValorTitulo()%>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Juros
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;IOF
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table class="box_notopborder" width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;Valor Cobrado
+						          		</td>
+						          	</tr>
+						          	<tr>
+						          		<td class="box_fill">
+						          			&nbsp;
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;* DM-DUPL. MERCANTIL/DS-DUPL. SERVIÇOS/<br>
+						          			&nbsp;NP-NOTA PROMISSÓRIA/LC-LETRA DE CÂMBIO<br>
+						          			&nbsp;** M-ENDOSSO MANDATO/T-ENDOSSO TRANS-<br>
+						          			&nbsp;LATIVO<br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;<br>
+						          			&nbsp;<br>
+						          			&nbsp;<br>
+						          			&nbsp;<br>
+						          			&nbsp;<br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr rowspan="4">
+						          		<td nowrap width="40%" class="box_subtitle_1">
+														&nbsp;
+						          		</td>
+						          		<td nowrap width="25%" class="box_subtitle_1">
+						          			Código de Baixa:
+						          		</td>
+						          		<td nowrap width="25%" class="box_fill">
+						          			&nbsp;
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          	<tr>
+			          		<td>
+						          <table width="100%" border="0" cellspacing="0" cellpadding="0" valign="middle" align="center">
+						          	<tr>
+						          		<td nowrap class="box_subtitle_1">
+						          			&nbsp;<br>
+						          		</td>
+						          	</tr>
+						          </table>
+			          		</td>
+			          	</tr>
+			          </table>
+							</td>
+	          </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script language="javascript">
+	    function inicia() {
+
+			}
+    
+      function formSubmit() {
+	      document.frmMain.submit();
+			}
+    
+			function printPage() {
+				document.frmMain.printText.value = "";
+				document.frmMain.printGif.src="<%=Paths.getImagePath()%>/transparente.gif";
+				this.print();
+			}
+			
+		</script>
+  </s:FormStrategy>
+</p:Document>
+</html>

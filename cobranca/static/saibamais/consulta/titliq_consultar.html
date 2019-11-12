@@ -1,0 +1,397 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: titliq_consultar.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 27/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Títulos Liquidados - Consultar</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo consultar os títulos liquidados.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de listagem dos títulos liquidados do cedente .
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Pessoa Jurídica ou da Pessoa Física do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Tipo de Pessoa:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de pessoa do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				CPF/CNPJ:
+			</td>
+			<td width="75%" class="valor">
+				Número do CPF(Pessoa Física) ou CNPJ(Pessoa Jurídica) do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código Cliente (COCLI):
+			</td>
+			<td width="75%" class="valor">
+				Código do cliente no SICLI.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Pagamento:
+			</td>
+			<td width="75%" class="valor">
+				Data de pagamento do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número Docto:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título para o cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Título:
+			</td>
+			<td width="75%" class="valor">
+				Valor nominal do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nosso Número:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título no banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Situação:
+			</td>
+			<td width="75%" class="valor">
+				Situação do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Situação:
+			</td>
+			<td width="75%" class="valor">
+				Data da atual situação do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Vencimento:
+			</td>
+			<td width="75%" class="valor">
+				Data de vencimento do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Modalidade:
+			</td>
+			<td width="75%" class="valor">
+				Código da modalidade do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Crédito:
+			</td>
+			<td width="75%" class="valor">
+				Data de crédito do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Meio de Entrada:
+			</td>
+			<td width="75%" class="valor">
+				Canal utilizado como meio de entrada do título no sistema do banco, se registrado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Moeda:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de moeda do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV Recebedor:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV recebedor do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV Cobrador:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV cobrador do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Espécie:
+			</td>
+			<td width="75%" class="valor">
+				Espécie do título de cobrança.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Aceite:
+			</td>
+			<td width="75%" class="valor">
+				Tipo de aceite.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número Lote:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do número de lote quando ocorrer liquidação do título via Compensação.
+			</td>
+		</tr>													
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Quantidade Moeda:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade da moeda.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Abatimento:
+			</td>
+			<td width="75%" class="valor">
+				Valor de abatimento do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Entrada:
+			</td>
+			<td width="75%" class="valor">
+				Data do registro do título no sistema do banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Juros:
+			</td>
+			<td width="75%" class="valor">
+				Valor total de juros do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual de Juros:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de juros do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Multa:
+			</td>
+			<td width="75%" class="valor">
+				Valor total de multa do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Percentual de Multa:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de multa do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Multa:
+			</td>
+			<td width="75%" class="valor">
+				Data para começo de cobrança da multa.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Multa:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para cobrança da multa no título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Desconto 1, 2 e 3:
+			</td>
+			<td width="75%" class="valor">
+				Valor de desconto para o título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Desconto Percentual 1, 2 e 3:
+			</td>
+			<td width="75%" class="valor">
+				Percentual de desconto para o título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Desconto 1, 2 e 3:
+			</td>
+			<td width="75%" class="valor">
+				Data para começo de cobrança do desconto no título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Desconto 1, 2 e 3:
+			</td>
+			<td width="75%" class="valor">
+				Quantidade de dias para vigência do desconto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Emissão:
+			</td>
+			<td width="75%" class="valor">
+				Data de emissão do título liquidado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data para Protesto:
+			</td>
+			<td width="75%" class="valor">
+				Data prevista para encaminhar título ao cartório.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Prazo Protesto:
+			</td>
+			<td width="75%" class="valor">
+				Prazo em dias para o protesto.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Cobrado:
+			</td>
+			<td width="75%" class="valor">
+				Valor de liquidação do título.
+			</td>
+		</tr>
+				
+	</table>		
+
+</BODY>
+
+</HTML>

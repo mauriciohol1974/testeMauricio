@@ -1,0 +1,298 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.gov.caixa</groupId>
+  <artifactId>sigcb</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  <name>cobranca</name>
+  <dependencies>
+  
+  			<!-- https://mvnrepository.com/artifact/struts/struts -->
+		<dependency>
+		    <groupId>struts</groupId>
+		    <artifactId>struts</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		    <version>1.9.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>	
+		
+		<!-- https://mvnrepository.com/artifact/commons-pool/commons-pool -->
+		<dependency>
+		    <groupId>commons-pool</groupId>
+		    <artifactId>commons-pool</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/jakarta-regexp/jakarta-regexp -->
+		<dependency>
+		    <groupId>jakarta-regexp</groupId>
+		    <artifactId>jakarta-regexp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.ejb/javax.ejb-api -->
+		<dependency>
+		    <groupId>javax.ejb</groupId>
+		    <artifactId>javax.ejb-api</artifactId>
+		    <version>3.2.2</version>
+		</dependency>
+
+		
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+				
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-beans</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.ldap/spring-ldap -->
+		<dependency>
+		    <groupId>org.springframework.ldap</groupId>
+		    <artifactId>spring-ldap</artifactId>
+		    <version>1.2.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-tx</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.2</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		  <groupId>jstl</groupId>
+		  <artifactId>jstl</artifactId>
+		  <version>1.2</version>
+		  <scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+		  <groupId>taglibs</groupId>
+		  <artifactId>standard</artifactId>
+		  <version>1.1.2</version>
+		  <scope>compile</scope>
+		</dependency>
+		
+
+				
+		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+		<dependency>
+		    <groupId>net.sf.jasperreports</groupId>
+		    <artifactId>jasperreports</artifactId>
+		    <version>4.0.1</version>
+		</dependency>
+				
+		
+
+
+		<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+	    <dependency>
+	        <groupId>net.sf.json-lib</groupId>
+	        <artifactId>json-lib</artifactId>
+	        <version>2.4</version>
+	        <classifier>jdk15</classifier>
+	    </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph -->
+		<dependency>
+		    <groupId>net.sf.ezmorph</groupId>
+		    <artifactId>ezmorph</artifactId>
+		    <version>1.0.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+		<dependency>
+		    <groupId>commons-collections</groupId>
+		    <artifactId>commons-collections</artifactId>
+		    <version>3.2.1</version>
+		</dependency>
+
+		
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>3.8.2</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+		
+				
+
+		
+		<!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.1.4</version>
+		</dependency>
+		
+		
+		
+		<!-- Geracao MAVEN GW--> 
+		<dependency>
+	  		<groupId>br.gov.caixa.SirotconEAP</groupId>
+	  		<artifactId>sirotcon-ejb-lib</artifactId>
+	  		<version>2.3.0.1</version>
+		</dependency>
+		
+		<dependency>
+  			<groupId>br.gov.caixa</groupId>
+  			<artifactId>SiranPkg-5.0.0</artifactId>
+  			<version>5.0.0</version>
+		</dependency>
+		
+		<dependency>
+  			<groupId>br.gov.caixa</groupId>
+  			<artifactId>siico-eap-1.0.1</artifactId>
+  			<version>1.0.1</version>
+		</dependency>
+			
+		<dependency>
+  			<groupId>br.gov.caixa</groupId>
+  			<artifactId>exml</artifactId>
+  			<version>1.0.0</version>
+		</dependency>
+		 	
+		 
+		 <!--  
+		<dependency>
+		    <groupId>exml</groupId>
+		    <artifactId>exml</artifactId>
+		    <version>7.0</version>
+		</dependency>
+		 -->
+		<dependency>
+  			<groupId>br.gov.caixa.ceflog</groupId>
+  			<artifactId>CeflogEAP</artifactId>
+  			<version>2.5.0.0</version>
+		</dependency>
+		
+
+	</dependencies>
+  
+
+  <build>
+   <finalName>cobranca</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+		  <artifactId>maven-assembly-plugin</artifactId>
+		  <version>2.2-beta-5</version>
+		  <configuration>
+		  	 <finalName>cobrancastatic</finalName>
+		    <descriptors>
+		      <descriptor>/assembly/zip.xml</descriptor>
+		    </descriptors>
+		    <archive>
+		          <manifestEntries>
+		             <Implementation-Version>${LABEL}</Implementation-Version>
+		          </manifestEntries>
+		       		</archive>
+		  </configuration>
+		  <executions>
+		    <execution>
+		      <id>make-assembly</id> 
+		      <phase>package</phase> 
+		      <goals>
+		        <goal>single</goal> 
+		      </goals>
+		    </execution>
+		  </executions>
+		</plugin>
+    </plugins>
+  </build>
+</project>

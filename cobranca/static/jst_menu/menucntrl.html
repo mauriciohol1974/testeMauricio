@@ -1,0 +1,75 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: menucntrl.html - HTML
+*Autor: Glauber M. Gallego - ggallego
+*Ultima Atualização: 01/10/2004
+************************************************/
+-->
+
+<html>
+
+<head>
+	<title>Saiba Mais</title>
+
+	<meta http-equiv="Content-Language" content="pt-br" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<meta name="description" content="Página de controle do Joust Outliner" />
+	<meta name="keywords" content="Joust Outliner" />
+	<meta name="revisit-after" content="30 days" />
+	<meta name="robots" content="NOINDEX,NOFOLLOW" />
+
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" ID="JoustStyles" type="text/css" href="../css/jst.css" />
+	
+	<script type="text/javascript" src="../js/jst_menucntrl.js"></script>
+</head>
+
+<body class="menucntrl">
+
+	<img style="position:absolute;top:0px;right:0px;" 
+		src="../imagens/saibamais/joust/title_turn_left.gif" width="6" height="14" alt="">
+
+	<img style="position:absolute;top:2px;left:5px;" 
+		src="../imagens/saibamais/joust/mnu_topicos.gif" width="50" height="9" alt="" />
+
+	<a href="javascript:parent.theMenu.openAll();"
+		onmouseover="return parent.setStatus('Expandir estrutura do menu');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:1px;left:95px;" id="expandir" 
+			src="../imagens/saibamais/joust/mnu_expandir.gif" width="16" height="11"
+			alt="Expandir estrutura do menu"
+			title="Expandir estrutura do menu">
+	</a>
+	
+	<a href="javascript:parent.theMenu.closeAll();"
+		onmouseover="return parent.setStatus('Contrair estrutura do menu');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:1px;left:130px;" id="contrair" 
+			src="../imagens/saibamais/joust/mnu_contrair.gif" width="16" height="11"
+			alt="Contrair estrutura do menu"
+			title="Contrair estrutura do menu">
+	</a>
+
+	<a href="javascript:hidemenu();"
+		onmouseover="return parent.setStatus('Remover Menu');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:1px;left:160px;display:block" 
+		id="remover" src="../imagens/saibamais/joust/mnu_esconder.gif" width="11" height="11"
+			alt="Remover Menu"
+			title="Remover Menu (possivel apenas em Internet Explorer 5.0).">
+	</a>
+
+	<script type="text/javascript">
+		if (navigator.userAgent.indexOf('MSIE') == -1) {
+			document.getElementById("remover").style.display = "none";
+		}
+	</script>
+
+</body>
+</html>

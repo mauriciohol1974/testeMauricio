@@ -1,0 +1,174 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: pvcob_manter_listar_cep.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 31/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Manter PV Cobrador (CEP) - Listar</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo listar por faixa de CEP de cobertura das Unidades PV Cobrador. 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Alterar:
+			</td>
+			<td width="75%" class="valor">
+				Encaminha para funcionalidade é alterar a Unidade PV Cobrador selecionada.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Excluir:
+			</td>
+			<td width="75%" class="valor">
+				Alterna a situação da Unidade PV Cobrador para "Inativa" (Exclusão lógica).
+				<br>Esta Unidade só será removida do banco de dados após uma rotina batch de expurgo.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de filtrar Unidade de PV Cobrador para manutenção. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cep De:
+			</td>
+			<td width="75%" class="valor">
+				Número do CEP inicial da filtragem.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Até:
+			</td>
+			<td width="75%" class="valor">
+				Número do CEP final da filtragem.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cep Inicial:
+			</td>
+			<td width="75%" class="valor">
+				Número do CEP inicial de cobertura da Unidade PV Cobrador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cep Final:
+			</td>
+			<td width="75%" class="valor">
+				Número do CEP final de cobertura da Unidade PV Cobrador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				UF:
+			</td>
+			<td width="75%" class="valor">
+				Unidade Federação da Unidade PV Cobrador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Unidade PV:
+			</td>
+			<td width="75%" class="valor">
+				Código da Unidade PV Cobrador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nome Unidade:
+			</td>
+			<td width="75%" class="valor">
+				Nome da Unidade PV Cobrador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Situação:
+			</td>
+			<td width="75%" class="valor">
+				Situação da Unidade PV Cobrador.
+			</td>
+			
+	</table>		
+
+</BODY>
+
+</HTML>

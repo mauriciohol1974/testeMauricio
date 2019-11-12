@@ -1,0 +1,255 @@
+<!--
+/***********************************************
+*Politec - Filial São Paulo
+*Fabrica de Projetos - Outubro de 2003
+*Projeto CAIXA - SIGCB
+*Componente: liqreje_acao_recomando.html - HTML
+*Autor: Michel Duarte dos Santos - mdsantos
+*Ultima Atualização: 26/01/2005
+************************************************/
+-->
+<HTML>
+
+<HEAD>
+	<TITLE>Saiba Mais</TITLE>
+	<meta http-equiv="Content-Language" content="pt-br"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	
+	<meta name="description" content="Saiba Mais"/>
+	<meta name="keywords" content="Saiba Mais Caixa"/>
+	<meta name="revisit-after" content="30 days" />
+	
+	<link rel="SHORTCUT ICON" href="http://srvsb040/_images/caixa.ico"/>
+	<link rel="stylesheet" type="text/css" href="../../css/jst_text.css" />
+	
+	<script type="text/javascript" src="../../js/jst_text.js"></script>
+</HEAD>
+
+<BODY>
+
+	<H3><A NAME="top">Liquidações Rejeitadas - Recomando</A><HR/></H3>
+
+	<a href="javascript:this.printer.style.display='none';this.print();"
+		onmouseover="return parent.setStatus('Imprime esta página de texto.');" 
+		onmouseout="return parent.clearStatus();">
+		<img style="position:absolute;top:20px;left:08px;display:block" id="printer" 
+			src="../../imagens/diversos/print.gif" width="16" height="14"
+			alt="Imprime esta página de texto."
+			title="Imprime esta página de texto."/>
+	</a>
+
+	<table width="100%" align="center" border="0" cellspacing="2" cellpadding="2" class="blueborder">
+
+		<!-- Descricao -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Descrição Funcionalidade:
+			</td>
+		</tr>
+		<tr>
+			<td class="valor" colspan="2">
+				Esta funcionalidade tem como objetivo a ação de recomandar uma liquidação rejeitada.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Botoes -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Botões de Ação:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Confirmar:
+			</td>
+			<td width="75%" class="valor">
+				Confirma a inclusão das alterações na liquidação rejeitada.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Voltar:
+			</td>
+			<td width="75%" class="valor">
+				Retorna para funcionalidade de listagem da liquidação rejeitada.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+		</tr>
+
+		<!-- Campos -->
+		<tr>
+			<td class="titulo" colspan="2">
+				Campos:
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Opção:
+			</td>
+			<td width="75%" class="valor">
+				Tipo da pedência ou consulta.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				PV Recebedor/Centralizador:
+			</td>
+			<td width="75%" class="valor">
+				Código do PV Recebedor/Centralizador.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Meio Liquidação:
+			</td>
+			<td width="75%" class="valor">
+				Canal utilizado como meio de liquidação do título rejeitado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data:
+			</td>
+			<td width="75%" class="valor">
+				Data de início da filtragem.
+				<br>Este campo virá em branco, caso este não tenha sido preenchido no filtro.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data de Referência:
+			</td>
+			<td width="75%" class="valor">
+				Data da liquidação rejeitada.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sequência:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do número sequencial do registro rejeitado no processamento 
+				da liquidação do dia.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente:
+			</td>
+			<td width="75%" class="valor">
+				Código do cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nosso Número:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do título no banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Recebido:
+			</td>
+			<td width="75%" class="valor">
+				Valor recebido do título liquidado.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data Situação Anterior:
+			</td>
+			<td width="75%" class="valor">
+				Data da última situação rejeitada.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Código do Erro:
+			</td>
+			<td width="75%" class="valor">
+				Código do erro que motivou a rejeição do título.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Erro:
+			</td>
+			<td width="75%" class="valor">
+				Descrição do Erro.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Número do Lote:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do número de lote quando ocorrer liquidação do título via Compensação. 
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Sequência do Lote:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador do número sequencial dos títulos liquidados via compensação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Data de Movimento:
+			</td>
+			<td width="75%" class="valor">
+				Data da última movimentação.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Cedente Corrigido:
+			</td>
+			<td width="75%" class="valor">
+				Código do novo cedente.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Nosso Número Corrigido:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador novo do título no banco.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Lote Corrigido:
+			</td>
+			<td width="75%" class="valor">
+				Código identificador novo do número de lote.
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="valor_enfase">
+				Valor Corrigido:
+			</td>
+			<td width="75%" class="valor">
+				Valor corrigido da liquidação.
+				<br>Nesta funcionalidade, este campo fica desabilitado.
+			</td>
+		</tr>
+	</table>		
+
+</BODY>
+
+</HTML>
