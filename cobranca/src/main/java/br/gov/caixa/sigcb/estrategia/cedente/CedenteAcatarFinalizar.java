@@ -31,7 +31,7 @@ import br.gov.caixa.sigcb.util.Util;
  * <DD>15/10/2004</DD>
  * </DL>
  * 
- * @author Renato K. Araujo - raraujo@sao.politec.com.br
+ * @author MAURICIO
  */
 public class CedenteAcatarFinalizar extends CedenteAlterarEstrategia {
 
